@@ -15,6 +15,7 @@ import json
 from typing import Dict, Any, Optional, List
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
@@ -234,14 +235,47 @@ class WebAutomation:
             # 填写出发日期
             date_input_xpath = self.xpath_config.get('departure_date_input')
             if date_input_xpath:
-                date_input = self.wait.until(
-                    EC.element_to_be_clickable((By.XPATH, date_input_xpath))
-                )
-                date_input.clear()
-                date_input.send_keys(departure_date)
-                
-                if self.logger:
-                    self.logger.info(f"出发日期填写成功: {departure_date}")
+                try:
+                    # 等待日期输入框可见并可交互
+                    date_input = self.wait.until(
+                        EC.element_to_be_clickable((By.XPATH, date_input_xpath))
+                    )
+                    
+                    # 点击日期输入框以确保获得焦点
+                    date_input.click()
+                    time.sleep(0.5)  # 短暂等待确保元素状态稳定
+                    
+                    # 尝试清空输入框，如果失败则使用键盘快捷键
+                    try:
+                        date_input.clear()
+                    except Exception:
+                        # 如果clear()失败，使用Ctrl+A选择全部内容然后删除
+                        date_input.send_keys(Keys.CONTROL + "a")
+                        date_input.send_keys(Keys.DELETE)
+                    
+                    # 输入日期
+                    date_input.send_keys(departure_date)
+                    
+                    if self.logger:
+                        self.logger.info(f"出发日期填写成功: {departure_date}")
+                        
+                except Exception as date_error:
+                    if self.logger:
+                        self.logger.warning(f"日期输入遇到问题，尝试备用方法: {str(date_error)}")
+                    
+                    # 备用方法：使用JavaScript直接设置值
+                    try:
+                        date_input = self.driver.find_element(By.XPATH, date_input_xpath)
+                        self.driver.execute_script("arguments[0].value = arguments[1];", date_input, departure_date)
+                        # 触发change事件
+                        self.driver.execute_script("arguments[0].dispatchEvent(new Event('change'));", date_input)
+                        
+                        if self.logger:
+                            self.logger.info(f"使用JavaScript方法填写日期成功: {departure_date}")
+                    except Exception as js_error:
+                        if self.logger:
+                            self.logger.error(f"JavaScript方法也失败: {str(js_error)}")
+                        raise date_error  # 抛出原始错误
             
             return True
             
@@ -574,6 +608,126 @@ class WebAutomation:
             if self.logger:
                 log_exception('web_automation', 'take_screenshot', e)
         return False
+
+    def navigate_to_query_page(self) -> bool:
+        """
+        导航到查询页面（组合操作）
+        
+        完成完整的页面导航流程：
+        1. 访问航班查询页面
+        2. 点击"按航班号"按钮
+        
+        Returns:
+            bool: 是否导航成功
+        """
+        try:
+            if self.logger:
+                self.logger.info("开始导航到查询页面")
+            
+            # 1. 导航到航班查询页面
+            if not self.navigate_to_flight_page():
+                if self.logger:
+                    self.logger.error("导航到航班页面失败")
+                return False
+            
+            # 2. 点击"按航班号"按钮
+            if not self.click_flight_number_button():
+                if self.logger:
+                    self.logger.error("点击航班号按钮失败")
+                return False
+            
+            if self.logger:
+                self.logger.info("查询页面导航成功")
+            
+            return True
+            
+        except Exception as e:
+            if self.logger:
+                log_exception('web_automation', 'navigate_to_query_page', e)
+            return False
+
+    def fill_query_form(self, flight_number: str, departure_date: str) -> bool:
+        """
+        填写查询表单（组合操作）
+        
+        完成完整的表单填写流程：
+        1. 填写航班号和出发日期
+        2. 处理验证码识别
+        3. 点击查询按钮
+        
+        Args:
+            flight_number (str): 航班号
+            departure_date (str): 出发日期（YYYY-MM-DD格式）
+            
+        Returns:
+            bool: 是否填写成功
+        """
+        try:
+            if self.logger:
+                self.logger.info(f"开始填写查询表单: {flight_number}, {departure_date}")
+            
+            # 1. 填写航班信息
+            if not self.fill_flight_info(flight_number, departure_date):
+                if self.logger:
+                    self.logger.error("填写航班信息失败")
+                return False
+            
+            # 2. 处理验证码
+            if not self.handle_captcha(flight_number):
+                if self.logger:
+                    self.logger.error("验证码处理失败")
+                return False
+            
+            # 3. 点击查询按钮
+            if not self.click_query_button():
+                if self.logger:
+                    self.logger.error("点击查询按钮失败")
+                return False
+            
+            if self.logger:
+                self.logger.info(f"查询表单填写成功: {flight_number}")
+            
+            return True
+            
+        except Exception as e:
+            if self.logger:
+                log_exception('web_automation', 'fill_query_form', e, 
+                            {'flight_number': flight_number, 'departure_date': departure_date})
+            return False
+
+    def click_query_button(self) -> bool:
+        """
+        点击查询按钮
+        
+        等待查询按钮可点击并执行点击操作，然后等待查询结果加载
+        
+        Returns:
+            bool: 是否点击成功
+        """
+        try:
+            xpath = self.xpath_config.get('query_button')
+            if not xpath:
+                raise ValueError("未配置查询按钮XPath")
+            
+            if self.logger:
+                self.logger.info("正在点击查询按钮")
+            
+            # 等待按钮可点击
+            button = self.wait.until(EC.element_to_be_clickable((By.XPATH, xpath)))
+            button.click()
+            
+            # 等待查询结果加载
+            time.sleep(2)
+            
+            if self.logger:
+                self.logger.info("查询按钮点击成功")
+            
+            return True
+            
+        except Exception as e:
+            if self.logger:
+                log_exception('web_automation', 'click_query_button', e)
+            return False
 
 
 # 便捷函数

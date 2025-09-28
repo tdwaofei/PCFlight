@@ -1,1 +1,2 @@
 2025-09-18 15:35:45 - FlightCrawler - INFO - [SYSTEM] 测试日志消息
+2025-09-18 16:06:31 - FlightCrawler - ERROR - Tesseract不可用，请安装pytesseract

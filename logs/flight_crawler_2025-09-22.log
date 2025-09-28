@@ -1,0 +1,5 @@
+2025-09-22 13:50:50 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-22 13:57:56 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-22 13:59:49 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-22 13:59:49 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-22 13:59:49 - FlightCrawler - INFO - Tesseract可用: True

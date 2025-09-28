@@ -1,0 +1,1393 @@
+2025-09-20 09:36:01 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 09:36:01 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 09:36:01 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.csv
+2025-09-20 09:36:01 - FlightCrawler - ERROR - 异常发生在 input_handler.read_flight_data: ValueError: 不支持的文件格式: .csv，支持的格式: ['.xlsx', '.xls'] | 上下文: file_path=input/sample_flights.csv
+2025-09-20 09:36:01 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\input_handler.py", line 60, in read_flight_data
+    self._validate_file(file_path)
+  File "D:\code\dap\PCFlight\modules\input_handler.py", line 103, in _validate_file
+    raise ValueError(f"不支持的文件格式: {file_ext}，支持的格式: {self.supported_extensions}")
+ValueError: 不支持的文件格式: .csv，支持的格式: ['.xlsx', '.xls']
+
+2025-09-20 09:36:01 - FlightCrawler - ERROR - 读取输入文件失败: 不支持的文件格式: .csv，支持的格式: ['.xlsx', '.xls']
+2025-09-20 09:36:01 - FlightCrawler - INFO - ==================================================
+2025-09-20 09:36:01 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 09:36:01 - FlightCrawler - INFO - 开始时间: 2025-09-20 09:36:01
+2025-09-20 09:36:01 - FlightCrawler - INFO - 结束时间: 2025-09-20 09:36:01
+2025-09-20 09:36:01 - FlightCrawler - INFO - 总耗时: 0:00:00.003953
+2025-09-20 09:36:01 - FlightCrawler - INFO - 总航班数: 0
+2025-09-20 09:36:01 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 09:36:01 - FlightCrawler - INFO - 航班成功率: 0%
+2025-09-20 09:36:01 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 09:36:01 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 09:36:01 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 09:36:01 - FlightCrawler - INFO - ==================================================
+2025-09-20 09:39:21 - FlightCrawler - INFO - 示例输入文件创建成功: input\sample_flights.xlsx
+2025-09-20 09:41:38 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 09:41:38 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 09:41:38 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 09:41:38 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 09:41:38 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 09:41:38 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 09:41:38 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 09:41:38 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 09:41:38 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 09:41:38 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 09:42:31 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 09:42:31 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 09:42:31 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 09:42:31 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:42:31 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:42:33 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 09:42:33 - FlightCrawler - ERROR - 处理航班 CA1234 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:42:33 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:42:35 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 09:42:35 - FlightCrawler - ERROR - 处理航班 CZ3456 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:42:35 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:42:35 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 09:42:35 - FlightCrawler - INFO - ==================================================
+2025-09-20 09:42:35 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 09:42:35 - FlightCrawler - INFO - 开始时间: 2025-09-20 09:41:38
+2025-09-20 09:42:35 - FlightCrawler - INFO - 结束时间: 2025-09-20 09:42:35
+2025-09-20 09:42:35 - FlightCrawler - INFO - 总耗时: 0:00:57.112797
+2025-09-20 09:42:35 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 09:42:35 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 09:42:35 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 09:42:35 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 09:42:35 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 09:42:35 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 09:42:35 - FlightCrawler - INFO - ==================================================
+2025-09-20 09:48:30 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 09:48:30 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 09:48:30 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 09:48:30 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 09:48:30 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 09:48:30 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 09:48:30 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 09:48:30 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 09:48:30 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 09:48:30 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 09:48:34 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 09:48:34 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 09:48:34 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 09:48:34 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:48:34 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:48:36 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 09:48:36 - FlightCrawler - ERROR - 处理航班 CA1234 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:48:36 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:48:38 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 09:48:38 - FlightCrawler - ERROR - 处理航班 CZ3456 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:48:38 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:48:38 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 09:48:38 - FlightCrawler - INFO - ==================================================
+2025-09-20 09:48:38 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 09:48:38 - FlightCrawler - INFO - 开始时间: 2025-09-20 09:48:30
+2025-09-20 09:48:38 - FlightCrawler - INFO - 结束时间: 2025-09-20 09:48:38
+2025-09-20 09:48:38 - FlightCrawler - INFO - 总耗时: 0:00:07.565053
+2025-09-20 09:48:38 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 09:48:38 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 09:48:38 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 09:48:38 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 09:48:38 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 09:48:38 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 09:48:38 - FlightCrawler - INFO - ==================================================
+2025-09-20 09:50:00 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 09:50:00 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 09:50:00 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 09:50:00 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 09:50:01 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 09:50:01 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 09:50:01 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 09:50:01 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 09:50:01 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 09:50:01 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 09:50:05 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 09:50:05 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 09:50:05 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 09:50:05 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:50:05 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:50:07 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 09:50:07 - FlightCrawler - ERROR - 处理航班 CA1234 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:50:07 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:50:09 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 09:50:09 - FlightCrawler - ERROR - 处理航班 CZ3456 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 09:50:09 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 09:50:09 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 09:50:09 - FlightCrawler - INFO - ==================================================
+2025-09-20 09:50:09 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 09:50:09 - FlightCrawler - INFO - 开始时间: 2025-09-20 09:50:00
+2025-09-20 09:50:09 - FlightCrawler - INFO - 结束时间: 2025-09-20 09:50:09
+2025-09-20 09:50:09 - FlightCrawler - INFO - 总耗时: 0:00:08.405759
+2025-09-20 09:50:09 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 09:50:09 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 09:50:09 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 09:50:09 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 09:50:09 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 09:50:09 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 09:50:09 - FlightCrawler - INFO - ==================================================
+2025-09-20 17:20:56 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 17:20:56 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 17:20:56 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 17:20:56 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 17:20:56 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 17:20:56 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 17:20:56 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 17:20:56 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 17:20:56 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 17:20:56 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 17:21:00 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 17:21:00 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 17:21:00 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 17:21:00 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 17:21:00 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 17:21:02 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 17:21:02 - FlightCrawler - ERROR - 处理航班 CA1234 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 17:21:02 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 17:21:04 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 17:21:04 - FlightCrawler - ERROR - 处理航班 CZ3456 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 17:21:04 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 17:21:04 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 17:21:04 - FlightCrawler - INFO - ==================================================
+2025-09-20 17:21:04 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 17:21:04 - FlightCrawler - INFO - 开始时间: 2025-09-20 17:20:56
+2025-09-20 17:21:04 - FlightCrawler - INFO - 结束时间: 2025-09-20 17:21:04
+2025-09-20 17:21:04 - FlightCrawler - INFO - 总耗时: 0:00:08.156814
+2025-09-20 17:21:04 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 17:21:04 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 17:21:04 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 17:21:04 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 17:21:04 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 17:21:04 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 17:21:04 - FlightCrawler - INFO - ==================================================
+2025-09-20 17:23:43 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 17:23:43 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 17:23:43 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 17:23:43 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 17:23:43 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 17:23:43 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 17:23:43 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 17:23:43 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 17:23:43 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 17:23:43 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 17:23:49 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 17:23:49 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 17:23:49 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 17:23:49 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 17:23:49 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 17:23:51 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 17:23:51 - FlightCrawler - ERROR - 处理航班 CA1234 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 17:23:51 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 17:23:53 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 17:23:53 - FlightCrawler - ERROR - 处理航班 CZ3456 时发生异常: 'WebAutomation' object has no attribute 'navigate_to_query_page'
+2025-09-20 17:23:53 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 17:23:53 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 17:23:53 - FlightCrawler - INFO - ==================================================
+2025-09-20 17:23:53 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 17:23:53 - FlightCrawler - INFO - 开始时间: 2025-09-20 17:23:43
+2025-09-20 17:23:53 - FlightCrawler - INFO - 结束时间: 2025-09-20 17:23:53
+2025-09-20 17:23:53 - FlightCrawler - INFO - 总耗时: 0:00:09.666138
+2025-09-20 17:23:53 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 17:23:53 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 17:23:53 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 17:23:53 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 17:23:53 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 17:23:53 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 17:23:53 - FlightCrawler - INFO - ==================================================
+2025-09-20 18:51:27 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 18:51:27 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 18:51:27 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 18:51:27 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 18:51:27 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 18:51:27 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 18:51:27 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 18:51:27 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 18:51:27 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 18:51:27 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 18:51:34 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 18:51:34 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 18:51:34 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 18:51:34 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 18:51:34 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 18:51:34 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 18:51:34 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 18:51:35 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 18:51:35 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 18:51:35 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-17
+2025-09-20 18:51:35 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-17
+2025-09-20 18:51:35 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-20 18:51:35 - FlightCrawler - ERROR - 异常发生在 web_automation.fill_flight_info: InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+ | 上下文: flight_number=MU5100, departure_date=2025-09-17
+2025-09-20 18:51:35 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\web_automation.py", line 240, in fill_flight_info
+    date_input.clear()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 155, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+
+
+2025-09-20 18:51:35 - FlightCrawler - ERROR - 填写航班信息失败
+2025-09-20 18:51:35 - FlightCrawler - ERROR - [MU5100] 表单填写 - 失败
+2025-09-20 18:51:35 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 18:51:37 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 18:51:37 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 18:51:37 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 18:51:38 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 18:51:38 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 18:51:39 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 18:51:39 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 18:51:39 - FlightCrawler - INFO - 开始填写查询表单: CA1234, 2025-09-18
+2025-09-20 18:51:39 - FlightCrawler - INFO - 正在填写航班信息: CA1234, 2025-09-18
+2025-09-20 18:51:39 - FlightCrawler - INFO - 航班号填写成功: CA1234
+2025-09-20 18:51:39 - FlightCrawler - ERROR - 异常发生在 web_automation.fill_flight_info: InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+ | 上下文: flight_number=CA1234, departure_date=2025-09-18
+2025-09-20 18:51:39 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\web_automation.py", line 240, in fill_flight_info
+    date_input.clear()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 155, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+
+
+2025-09-20 18:51:39 - FlightCrawler - ERROR - 填写航班信息失败
+2025-09-20 18:51:39 - FlightCrawler - ERROR - [CA1234] 表单填写 - 失败
+2025-09-20 18:51:39 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 18:51:41 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 18:51:41 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 18:51:41 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 18:51:41 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 18:51:41 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 18:51:42 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 18:51:42 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 18:51:42 - FlightCrawler - INFO - 开始填写查询表单: CZ3456, 2025-09-19
+2025-09-20 18:51:42 - FlightCrawler - INFO - 正在填写航班信息: CZ3456, 2025-09-19
+2025-09-20 18:51:42 - FlightCrawler - INFO - 航班号填写成功: CZ3456
+2025-09-20 18:51:42 - FlightCrawler - ERROR - 异常发生在 web_automation.fill_flight_info: InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+ | 上下文: flight_number=CZ3456, departure_date=2025-09-19
+2025-09-20 18:51:42 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\web_automation.py", line 240, in fill_flight_info
+    date_input.clear()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 155, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+
+
+2025-09-20 18:51:42 - FlightCrawler - ERROR - 填写航班信息失败
+2025-09-20 18:51:42 - FlightCrawler - ERROR - [CZ3456] 表单填写 - 失败
+2025-09-20 18:51:42 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 18:51:42 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 18:51:42 - FlightCrawler - INFO - ==================================================
+2025-09-20 18:51:42 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 18:51:42 - FlightCrawler - INFO - 开始时间: 2025-09-20 18:51:27
+2025-09-20 18:51:42 - FlightCrawler - INFO - 结束时间: 2025-09-20 18:51:42
+2025-09-20 18:51:42 - FlightCrawler - INFO - 总耗时: 0:00:14.807506
+2025-09-20 18:51:42 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 18:51:42 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 18:51:42 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 18:51:42 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 18:51:42 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 18:51:42 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 18:51:42 - FlightCrawler - INFO - ==================================================
+2025-09-20 20:56:00 - FlightCrawler - INFO - 示例输入文件创建成功: input\sample_flights.xlsx
+2025-09-20 20:56:31 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 20:56:31 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 20:56:31 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 20:56:31 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 20:56:31 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 20:56:31 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 20:56:31 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 20:56:31 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 20:56:31 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 20:56:31 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 20:56:38 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 20:56:38 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 20:56:38 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 20:56:38 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 20:56:38 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 20:56:39 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 20:56:39 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 20:56:40 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 20:56:40 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 20:56:40 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-17
+2025-09-20 20:56:40 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-17
+2025-09-20 20:56:40 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-20 20:56:40 - FlightCrawler - ERROR - 异常发生在 web_automation.fill_flight_info: InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+ | 上下文: flight_number=MU5100, departure_date=2025-09-17
+2025-09-20 20:56:40 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\web_automation.py", line 240, in fill_flight_info
+    date_input.clear()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 155, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+
+
+2025-09-20 20:56:40 - FlightCrawler - ERROR - 填写航班信息失败
+2025-09-20 20:56:40 - FlightCrawler - ERROR - [MU5100] 表单填写 - 失败
+2025-09-20 20:56:40 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 20:56:42 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 20:56:42 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 20:56:42 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 20:56:42 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 20:56:42 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 20:56:44 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 20:56:44 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 20:56:44 - FlightCrawler - INFO - 开始填写查询表单: CA1234, 2025-09-18
+2025-09-20 20:56:44 - FlightCrawler - INFO - 正在填写航班信息: CA1234, 2025-09-18
+2025-09-20 20:56:44 - FlightCrawler - INFO - 航班号填写成功: CA1234
+2025-09-20 20:56:44 - FlightCrawler - ERROR - 异常发生在 web_automation.fill_flight_info: InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+ | 上下文: flight_number=CA1234, departure_date=2025-09-18
+2025-09-20 20:56:44 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\web_automation.py", line 240, in fill_flight_info
+    date_input.clear()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 155, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+
+
+2025-09-20 20:56:44 - FlightCrawler - ERROR - 填写航班信息失败
+2025-09-20 20:56:44 - FlightCrawler - ERROR - [CA1234] 表单填写 - 失败
+2025-09-20 20:56:44 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 20:56:46 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 20:56:46 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 20:56:46 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 20:56:46 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 20:56:46 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 20:56:47 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 20:56:47 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 20:56:47 - FlightCrawler - INFO - 开始填写查询表单: CZ3456, 2025-09-19
+2025-09-20 20:56:47 - FlightCrawler - INFO - 正在填写航班信息: CZ3456, 2025-09-19
+2025-09-20 20:56:47 - FlightCrawler - INFO - 航班号填写成功: CZ3456
+2025-09-20 20:56:47 - FlightCrawler - ERROR - 异常发生在 web_automation.fill_flight_info: InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+ | 上下文: flight_number=CZ3456, departure_date=2025-09-19
+2025-09-20 20:56:47 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\web_automation.py", line 240, in fill_flight_info
+    date_input.clear()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 155, in clear
+    self._execute(Command.CLEAR_ELEMENT)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 573, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=137.0.7151.69)
+Stacktrace:
+	GetHandleVerifier [0x0x493b03+62899]
+	GetHandleVerifier [0x0x493b44+62964]
+	(No symbol) [0x0x2c0f50]
+	(No symbol) [0x0x300fe7]
+	(No symbol) [0x0x32e50c]
+	(No symbol) [0x0x2fee74]
+	(No symbol) [0x0x32e784]
+	(No symbol) [0x0x34fd81]
+	(No symbol) [0x0x32e306]
+	(No symbol) [0x0x2fd670]
+	(No symbol) [0x0x2fe4e4]
+	GetHandleVerifier [0x0x6f4793+2556483]
+	GetHandleVerifier [0x0x6efd02+2537394]
+	GetHandleVerifier [0x0x4ba2fa+220586]
+	GetHandleVerifier [0x0x4aaae8+157080]
+	GetHandleVerifier [0x0x4b141d+184013]
+	GetHandleVerifier [0x0x49ba68+95512]
+	GetHandleVerifier [0x0x49bc10+95936]
+	GetHandleVerifier [0x0x486b5a+9738]
+	BaseThreadInitThunk [0x0x7550fcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x773a82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x773a827e+238]
+
+
+2025-09-20 20:56:47 - FlightCrawler - ERROR - 填写航班信息失败
+2025-09-20 20:56:47 - FlightCrawler - ERROR - [CZ3456] 表单填写 - 失败
+2025-09-20 20:56:47 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 20:56:47 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 20:56:47 - FlightCrawler - INFO - ==================================================
+2025-09-20 20:56:47 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 20:56:47 - FlightCrawler - INFO - 开始时间: 2025-09-20 20:56:31
+2025-09-20 20:56:47 - FlightCrawler - INFO - 结束时间: 2025-09-20 20:56:47
+2025-09-20 20:56:47 - FlightCrawler - INFO - 总耗时: 0:00:16.260275
+2025-09-20 20:56:47 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 20:56:47 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 20:56:47 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 20:56:47 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 20:56:47 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 20:56:47 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 20:56:47 - FlightCrawler - INFO - ==================================================
+2025-09-20 21:00:59 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:00:59 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 21:00:59 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 21:00:59 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 21:00:59 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 21:00:59 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 21:00:59 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 21:00:59 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 21:00:59 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:00:59 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 21:01:09 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 21:01:09 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 21:01:09 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 21:01:09 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 21:01:09 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 21:01:09 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 21:01:09 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 21:01:10 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 21:01:10 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 21:01:10 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-17
+2025-09-20 21:01:10 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-17
+2025-09-20 21:01:10 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-20 21:01:11 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-17
+2025-09-20 21:01:11 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-20 21:01:11 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:11 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:11 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:11 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:12 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:13 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 2/6
+2025-09-20 21:01:13 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:14 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:14 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:14 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:15 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:16 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 3/6
+2025-09-20 21:01:16 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:16 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:16 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:16 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:17 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:18 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 4/6
+2025-09-20 21:01:18 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:18 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:18 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:18 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:19 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:20 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 5/6
+2025-09-20 21:01:20 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:21 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:21 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:21 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:22 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:23 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 6/6
+2025-09-20 21:01:23 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:23 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:23 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:23 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:24 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:25 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | 已达到最大重试次数 6
+2025-09-20 21:01:25 - FlightCrawler - ERROR - 验证码处理失败
+2025-09-20 21:01:25 - FlightCrawler - ERROR - [MU5100] 表单填写 - 失败
+2025-09-20 21:01:25 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 21:01:27 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 21:01:27 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 21:01:27 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 21:01:27 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 21:01:27 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 21:01:28 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 21:01:28 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 21:01:28 - FlightCrawler - INFO - 开始填写查询表单: CA1234, 2025-09-18
+2025-09-20 21:01:28 - FlightCrawler - INFO - 正在填写航班信息: CA1234, 2025-09-18
+2025-09-20 21:01:28 - FlightCrawler - INFO - 航班号填写成功: CA1234
+2025-09-20 21:01:29 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-18
+2025-09-20 21:01:29 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 1/6
+2025-09-20 21:01:29 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:29 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:29 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:29 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:30 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:31 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 2/6
+2025-09-20 21:01:31 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:31 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:31 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:31 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:32 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:33 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 3/6
+2025-09-20 21:01:33 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:34 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:34 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:34 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:35 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:36 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 4/6
+2025-09-20 21:01:36 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:36 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:36 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:36 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:37 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:38 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 5/6
+2025-09-20 21:01:38 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:38 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:38 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:38 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:39 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:40 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 6/6
+2025-09-20 21:01:40 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:41 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:41 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:41 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:42 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:43 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | 已达到最大重试次数 6
+2025-09-20 21:01:43 - FlightCrawler - ERROR - 验证码处理失败
+2025-09-20 21:01:43 - FlightCrawler - ERROR - [CA1234] 表单填写 - 失败
+2025-09-20 21:01:43 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 21:01:45 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 21:01:45 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 21:01:45 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 21:01:45 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 21:01:45 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 21:01:46 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 21:01:46 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 21:01:46 - FlightCrawler - INFO - 开始填写查询表单: CZ3456, 2025-09-19
+2025-09-20 21:01:46 - FlightCrawler - INFO - 正在填写航班信息: CZ3456, 2025-09-19
+2025-09-20 21:01:46 - FlightCrawler - INFO - 航班号填写成功: CZ3456
+2025-09-20 21:01:47 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-20 21:01:47 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 1/6
+2025-09-20 21:01:47 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:47 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:47 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:47 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:48 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:49 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 2/6
+2025-09-20 21:01:49 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:49 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:49 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:49 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:50 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:51 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 3/6
+2025-09-20 21:01:51 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:51 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:51 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:51 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:52 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:53 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 4/6
+2025-09-20 21:01:53 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:54 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:54 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:54 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:55 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:56 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 5/6
+2025-09-20 21:01:56 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:56 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:56 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:56 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:57 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:01:58 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 6/6
+2025-09-20 21:01:58 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:01:58 - FlightCrawler - WARNING - 验证码识别失败，尝试 1/1
+2025-09-20 21:01:58 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:01:58 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:01:59 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:02:00 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | 已达到最大重试次数 6
+2025-09-20 21:02:00 - FlightCrawler - ERROR - 验证码处理失败
+2025-09-20 21:02:00 - FlightCrawler - ERROR - [CZ3456] 表单填写 - 失败
+2025-09-20 21:02:00 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 21:02:00 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 21:02:00 - FlightCrawler - INFO - ==================================================
+2025-09-20 21:02:00 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 21:02:00 - FlightCrawler - INFO - 开始时间: 2025-09-20 21:00:59
+2025-09-20 21:02:00 - FlightCrawler - INFO - 结束时间: 2025-09-20 21:02:00
+2025-09-20 21:02:00 - FlightCrawler - INFO - 总耗时: 0:01:01.283334
+2025-09-20 21:02:00 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 21:02:00 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 21:02:00 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 21:02:00 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 21:02:00 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 21:02:00 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 21:02:00 - FlightCrawler - INFO - ==================================================
+2025-09-20 21:10:11 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:10:11 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 21:10:11 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 21:10:11 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 21:10:11 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 21:10:11 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 21:10:11 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 21:10:11 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 21:10:11 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:10:11 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 21:10:18 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-20 21:10:18 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-20 21:10:18 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-20 21:10:18 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 21:10:18 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 21:10:18 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 21:10:18 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 21:10:20 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 21:10:20 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 21:10:20 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-17
+2025-09-20 21:10:20 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-17
+2025-09-20 21:10:20 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-20 21:10:20 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-17
+2025-09-20 21:10:20 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-20 21:10:20 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:20 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:20 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:20 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:20 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:21 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:22 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 2/6
+2025-09-20 21:10:22 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:23 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:23 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:23 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:23 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:24 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:25 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 3/6
+2025-09-20 21:10:25 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:25 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:25 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:25 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:25 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:26 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:27 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 4/6
+2025-09-20 21:10:27 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:27 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:27 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:27 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:27 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:28 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:29 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 5/6
+2025-09-20 21:10:29 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:29 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:29 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:29 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:29 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:30 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:31 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 6/6
+2025-09-20 21:10:31 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:31 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:31 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:31 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:31 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:32 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:33 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | 已达到最大重试次数 6
+2025-09-20 21:10:33 - FlightCrawler - ERROR - 验证码处理失败
+2025-09-20 21:10:33 - FlightCrawler - ERROR - [MU5100] 表单填写 - 失败
+2025-09-20 21:10:33 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 21:10:35 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-20 21:10:35 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 21:10:35 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 21:10:35 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 21:10:35 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 21:10:36 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 21:10:36 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 21:10:36 - FlightCrawler - INFO - 开始填写查询表单: CA1234, 2025-09-18
+2025-09-20 21:10:36 - FlightCrawler - INFO - 正在填写航班信息: CA1234, 2025-09-18
+2025-09-20 21:10:36 - FlightCrawler - INFO - 航班号填写成功: CA1234
+2025-09-20 21:10:37 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-18
+2025-09-20 21:10:37 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 1/6
+2025-09-20 21:10:37 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:37 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:37 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:37 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:37 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:38 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:39 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 2/6
+2025-09-20 21:10:39 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:39 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:39 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:39 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:39 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:40 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:41 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 3/6
+2025-09-20 21:10:41 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:41 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:41 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:41 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:41 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:42 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:43 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 4/6
+2025-09-20 21:10:43 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:44 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:44 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:44 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:44 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:45 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:46 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 5/6
+2025-09-20 21:10:46 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:46 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:46 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:46 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:46 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:47 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:48 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 6/6
+2025-09-20 21:10:48 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:48 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:48 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:48 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:48 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:49 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:50 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | 已达到最大重试次数 6
+2025-09-20 21:10:50 - FlightCrawler - ERROR - 验证码处理失败
+2025-09-20 21:10:50 - FlightCrawler - ERROR - [CA1234] 表单填写 - 失败
+2025-09-20 21:10:50 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 21:10:52 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-20 21:10:52 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-20 21:10:52 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-20 21:10:52 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-20 21:10:52 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-20 21:10:53 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-20 21:10:53 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-20 21:10:53 - FlightCrawler - INFO - 开始填写查询表单: CZ3456, 2025-09-19
+2025-09-20 21:10:53 - FlightCrawler - INFO - 正在填写航班信息: CZ3456, 2025-09-19
+2025-09-20 21:10:53 - FlightCrawler - INFO - 航班号填写成功: CZ3456
+2025-09-20 21:10:54 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-20 21:10:54 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 1/6
+2025-09-20 21:10:54 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:54 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:54 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:54 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:54 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:55 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:56 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 2/6
+2025-09-20 21:10:56 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:56 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:56 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:56 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:56 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:57 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:10:58 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 3/6
+2025-09-20 21:10:58 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:10:58 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:10:58 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:10:58 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:10:58 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:10:59 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:11:00 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 4/6
+2025-09-20 21:11:00 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:11:00 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:11:00 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:11:00 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:11:00 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:11:01 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:11:02 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 5/6
+2025-09-20 21:11:02 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:11:02 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:11:02 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:11:02 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:11:02 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:11:03 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:11:04 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 6/6
+2025-09-20 21:11:04 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-20 21:11:04 - FlightCrawler - ERROR - 异常发生在 ocr_processor.recognize_captcha: AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image' | 上下文: attempt=1, max_attempts=1
+2025-09-20 21:11:04 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 122, in recognize_captcha
+    self._preprocess_captcha_image,
+AttributeError: 'OCRProcessor' object has no attribute '_preprocess_captcha_image'
+
+2025-09-20 21:11:04 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-20 21:11:04 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | OCR识别失败
+2025-09-20 21:11:05 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-20 21:11:06 - FlightCrawler - ERROR - [CZ3456] 验证码识别 - 失败 | 已达到最大重试次数 6
+2025-09-20 21:11:06 - FlightCrawler - ERROR - 验证码处理失败
+2025-09-20 21:11:06 - FlightCrawler - ERROR - [CZ3456] 表单填写 - 失败
+2025-09-20 21:11:06 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-20 21:11:06 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-20 21:11:06 - FlightCrawler - INFO - ==================================================
+2025-09-20 21:11:06 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 21:11:06 - FlightCrawler - INFO - 开始时间: 2025-09-20 21:10:11
+2025-09-20 21:11:06 - FlightCrawler - INFO - 结束时间: 2025-09-20 21:11:06
+2025-09-20 21:11:06 - FlightCrawler - INFO - 总耗时: 0:00:55.885863
+2025-09-20 21:11:06 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 21:11:06 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 21:11:06 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 21:11:06 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 21:11:06 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 21:11:06 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 21:11:06 - FlightCrawler - INFO - ==================================================
+2025-09-20 21:12:21 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:12:21 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-20 21:12:21 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-20 21:12:21 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-20 21:12:21 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-20 21:12:21 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-20 21:12:21 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 21:12:21 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-20 21:12:21 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:12:21 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-20 21:12:35 - FlightCrawler - ERROR - 异常发生在 web_automation.start_browser: ConnectionError: Could not reach host. Are you offline?
+2025-09-20 21:12:35 - FlightCrawler - ERROR - 堆栈跟踪:
+urllib3.exceptions.SSLError: EOF occurred in violation of protocol (_ssl.c:1129)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='googlechromelabs.github.io', port=443): Max retries exceeded with url: /chrome-for-testing/latest-patch-versions-per-build.json (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\core\http.py", line 32, in get
+    resp = requests.get(
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 675, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='googlechromelabs.github.io', port=443): Max retries exceeded with url: /chrome-for-testing/latest-patch-versions-per-build.json (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\web_automation.py", line 105, in start_browser
+    service = Service(ChromeDriverManager().install())
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\chrome.py", line 40, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\core\driver_cache.py", line 110, in find_driver
+    key = self.__get_metadata_key(driver)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\core\driver_cache.py", line 144, in __get_metadata_key
+    driver_version = self.get_cache_key_driver_version(driver)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\core\driver_cache.py", line 154, in get_cache_key_driver_version
+    return driver.get_driver_version_to_download()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\core\driver.py", line 48, in get_driver_version_to_download
+    return self.get_latest_release_version()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\drivers\chrome.py", line 59, in get_latest_release_version
+    response = self._http_client.get(url)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\webdriver_manager\core\http.py", line 35, in get
+    raise exceptions.ConnectionError(f"Could not reach host. Are you offline?")
+requests.exceptions.ConnectionError: Could not reach host. Are you offline?
+
+2025-09-20 21:12:35 - FlightCrawler - ERROR - 浏览器启动失败
+2025-09-20 21:12:35 - FlightCrawler - INFO - ==================================================
+2025-09-20 21:12:35 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-20 21:12:35 - FlightCrawler - INFO - 开始时间: 2025-09-20 21:12:21
+2025-09-20 21:12:35 - FlightCrawler - INFO - 结束时间: 2025-09-20 21:12:35
+2025-09-20 21:12:35 - FlightCrawler - INFO - 总耗时: 0:00:14.150129
+2025-09-20 21:12:35 - FlightCrawler - INFO - 总航班数: 3
+2025-09-20 21:12:35 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-20 21:12:35 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-20 21:12:35 - FlightCrawler - INFO - 总航段数: 0
+2025-09-20 21:12:35 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-20 21:12:35 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-20 21:12:35 - FlightCrawler - INFO - ==================================================
+2025-09-20 21:13:05 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:13:05 - FlightCrawler - ERROR - 异常发生在 ocr_processor._perform_ocr: TypeError: Unsupported image object | 上下文: engine=tesseract, image_type=captcha
+2025-09-20 21:13:05 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 566, in _perform_ocr
+    result1 = self._tesseract_recognize_enhanced(image)
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 189, in _tesseract_recognize_enhanced
+    result = pytesseract.image_to_string(image, config=config).strip()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 341, in run_and_get_output
+    with save(image) as (temp_name, input_filename):
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 214, in save
+    image, extension = prepare(image)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 191, in prepare
+    raise TypeError('Unsupported image object')
+TypeError: Unsupported image object
+
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 异常发生在 ocr_processor._perform_ocr: TypeError: Unsupported image object | 上下文: engine=tesseract, image_type=captcha
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 566, in _perform_ocr
+    result1 = self._tesseract_recognize_enhanced(image)
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 189, in _tesseract_recognize_enhanced
+    result = pytesseract.image_to_string(image, config=config).strip()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 341, in run_and_get_output
+    with save(image) as (temp_name, input_filename):
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 214, in save
+    image, extension = prepare(image)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 191, in prepare
+    raise TypeError('Unsupported image object')
+TypeError: Unsupported image object
+
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 异常发生在 ocr_processor._perform_ocr: TypeError: Unsupported image object | 上下文: engine=tesseract, image_type=captcha
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 566, in _perform_ocr
+    result1 = self._tesseract_recognize_enhanced(image)
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 189, in _tesseract_recognize_enhanced
+    result = pytesseract.image_to_string(image, config=config).strip()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 341, in run_and_get_output
+    with save(image) as (temp_name, input_filename):
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 214, in save
+    image, extension = prepare(image)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 191, in prepare
+    raise TypeError('Unsupported image object')
+TypeError: Unsupported image object
+
+2025-09-20 21:13:06 - FlightCrawler - INFO - 验证码识别尝试 1/3
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 异常发生在 ocr_processor._get_image_data: AttributeError: 'bytes' object has no attribute 'screenshot_as_base64'
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 324, in _get_image_data
+    image_base64 = image_element.screenshot_as_base64
+AttributeError: 'bytes' object has no attribute 'screenshot_as_base64'
+
+2025-09-20 21:13:06 - FlightCrawler - INFO - 验证码识别尝试 2/3
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 异常发生在 ocr_processor._get_image_data: AttributeError: 'bytes' object has no attribute 'screenshot_as_base64'
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 324, in _get_image_data
+    image_base64 = image_element.screenshot_as_base64
+AttributeError: 'bytes' object has no attribute 'screenshot_as_base64'
+
+2025-09-20 21:13:06 - FlightCrawler - INFO - 验证码识别尝试 3/3
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 异常发生在 ocr_processor._get_image_data: AttributeError: 'bytes' object has no attribute 'screenshot_as_base64'
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 324, in _get_image_data
+    image_base64 = image_element.screenshot_as_base64
+AttributeError: 'bytes' object has no attribute 'screenshot_as_base64'
+
+2025-09-20 21:13:06 - FlightCrawler - ERROR - 验证码识别失败，已尝试 3 次
+2025-09-20 21:13:46 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:13:46 - FlightCrawler - ERROR - 异常发生在 ocr_processor._perform_ocr: TypeError: Unsupported image object | 上下文: engine=tesseract, image_type=captcha
+2025-09-20 21:13:46 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 566, in _perform_ocr
+    result1 = self._tesseract_recognize_enhanced(image)
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 189, in _tesseract_recognize_enhanced
+    result = pytesseract.image_to_string(image, config=config).strip()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 341, in run_and_get_output
+    with save(image) as (temp_name, input_filename):
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 214, in save
+    image, extension = prepare(image)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 191, in prepare
+    raise TypeError('Unsupported image object')
+TypeError: Unsupported image object
+
+2025-09-20 21:15:00 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:15:02 - FlightCrawler - ERROR - 异常发生在 ocr_processor._perform_ocr: TypeError: Unsupported image object | 上下文: engine=tesseract, image_type=captcha
+2025-09-20 21:15:02 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 566, in _perform_ocr
+    result1 = self._tesseract_recognize_enhanced(image)
+  File "D:\code\dap\PCFlight\modules\ocr_processor.py", line 189, in _tesseract_recognize_enhanced
+    result = pytesseract.image_to_string(image, config=config).strip()
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 486, in image_to_string
+    return {
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 489, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 341, in run_and_get_output
+    with save(image) as (temp_name, input_filename):
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 214, in save
+    image, extension = prepare(image)
+  File "C:\Users\aofei\AppData\Local\Programs\Python\Python39\lib\site-packages\pytesseract\pytesseract.py", line 191, in prepare
+    raise TypeError('Unsupported image object')
+TypeError: Unsupported image object
+
+2025-09-20 21:15:31 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:27:02 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-20 21:32:27 - FlightCrawler - INFO - 使用OCR引擎: tesseract

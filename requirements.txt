@@ -1,29 +1,29 @@
-# 航班数据爬虫系统依赖包
-# Web自动化
+# Flight Data Crawler System Dependencies
+# Web Automation
 selenium>=4.15.0
 webdriver-manager>=4.0.1
 
-# Excel处理
+# Excel Processing
 pandas>=2.1.0
 openpyxl>=3.1.2
 xlrd>=2.0.1
 
-# OCR识别
+# OCR Recognition
 paddlepaddle>=2.5.0
 paddleocr>=2.7.0
 Pillow>=10.0.0
 opencv-python>=4.8.0
 
-# 图像处理
+# Image Processing
 numpy>=1.24.0
 scipy>=1.11.0
 scikit-image>=0.21.0
 
-# HTTP请求
+# HTTP Requests
 requests>=2.31.0
 urllib3>=2.0.0
 
-# 其他工具
+# Other Tools
 loguru>=0.7.0
 click>=8.1.0
 tqdm>=4.66.0
