@@ -1,0 +1,62 @@
+{
+  "browser": {
+    "headless": false,
+    "window_size": "1920,1080",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "timeout": 30,
+    "implicit_wait": 10,
+    "page_load_timeout": 60
+  },
+  "ocr": {
+    "engine": "tesseract",
+    "language": "eng",
+    "config": "--psm 8 -c tessedit_char_whitelist=ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "time_image_config": "--psm 8 -c tessedit_char_whitelist=0123456789:"
+  },
+  "retry": {
+    "captcha_max_attempts": 6,
+    "time_image_max_attempts": 3,
+    "delay_seconds": 2,
+    "captcha_delay_seconds": 1
+  },
+  "output": {
+    "file_prefix": "flight_data_",
+    "timestamp_format": "%Y%m%d_%H%M%S",
+    "output_dir": "output",
+    "save_images": true,
+    "image_format": "base64"
+  },
+  "logging": {
+    "level": "INFO",
+    "log_dir": "logs",
+    "file_prefix": "flight_crawler_",
+    "max_file_size": "10MB",
+    "backup_count": 30,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - [%(module)s.%(funcName)s:%(lineno)d] - %(message)s",
+    "date_format": "%Y-%m-%d %H:%M:%S",
+    "console_output": true,
+    "file_rotation": "daily"
+  },
+  "website": {
+    "base_url": "https://tool.133.cn/flight/",
+    "api_url": "https://api.133.cn/tool/flight",
+    "identity": "pybLekv4D0g6mPr0"
+  },
+  "xpath": {
+    "flight_number_button": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[1]/span[2]",
+    "flight_number_input": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[4]/div/input",
+    "departure_date_input": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[5]/div/input",
+    "captcha_input": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[6]/div/input",
+    "captcha_image": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[6]/img",
+    "query_button": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/button",
+    "result_list": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]",
+    "segment_base": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]",
+    "departure_airport": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]/div[2]/span",
+    "arrival_airport": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]/div[3]/span",
+    "scheduled_departure": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]/div[4]/span",
+    "scheduled_arrival": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]/div[5]/span[1]",
+    "actual_departure_img": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]/div[6]/img",
+    "actual_arrival_img": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]/div[7]/img",
+    "flight_status": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{}]/div[10]/span"
+  }
+}

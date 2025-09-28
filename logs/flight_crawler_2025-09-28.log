@@ -1,0 +1,1091 @@
+2025-09-28 11:18:08 - FlightCrawler - INFO - 使用OCR引擎: tesseract
+2025-09-28 11:18:08 - FlightCrawler - INFO - ddddocr可用: False
+2025-09-28 11:18:08 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 11:18:08 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 11:18:35 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 11:18:35 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 11:18:35 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 11:18:35 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 11:18:35 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:32:11 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:32:11 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:32:11 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:32:11 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:32:11 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:35:16 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:35:16 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:35:16 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:35:16 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:35:16 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:35:16 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 13:35:16 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 13:35:16 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 13:35:16 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 13:35:16 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 13:35:16 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 13:35:16 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 13:35:16 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:35:16 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:35:16 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:35:16 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:35:16 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:35:16 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 13:35:42 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 13:35:42 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 13:35:42 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 13:35:42 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:35:42 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:35:43 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:35:43 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:35:44 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:35:44 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:35:44 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-17
+2025-09-28 13:35:44 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-17
+2025-09-28 13:35:44 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 13:35:45 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-17
+2025-09-28 13:35:45 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:35:45 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:35:45 - FlightCrawler - INFO - ddddocr 灰度放大锐化 识别成功: ruck
+2025-09-28 13:35:45 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: ruck
+2025-09-28 13:35:45 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:35:47 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:35:47 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 13:35:47 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:35:47 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:35:49 - FlightCrawler - INFO - [CA1234] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 13:35:49 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:35:49 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:35:49 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:35:49 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:35:50 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:35:50 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:35:50 - FlightCrawler - INFO - 开始填写查询表单: CA1234, 2025-09-18
+2025-09-28 13:35:50 - FlightCrawler - INFO - 正在填写航班信息: CA1234, 2025-09-18
+2025-09-28 13:35:50 - FlightCrawler - INFO - 航班号填写成功: CA1234
+2025-09-28 13:35:51 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-18
+2025-09-28 13:35:51 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:35:51 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:35:51 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-28 13:35:51 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-28 13:35:52 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-28 13:35:53 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 2/6
+2025-09-28 13:35:53 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:35:53 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-28 13:35:53 - FlightCrawler - ERROR - [CA1234] 验证码识别 - 失败 | OCR识别失败
+2025-09-28 13:35:55 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-28 13:35:56 - FlightCrawler - INFO - [CA1234] 验证码识别 - 开始 | 尝试 3/6
+2025-09-28 13:35:56 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:35:56 - FlightCrawler - INFO - ddddocr直接识别成功: igjf
+2025-09-28 13:35:56 - FlightCrawler - INFO - [CA1234] 验证码识别 - 成功 | 识别结果: igjf
+2025-09-28 13:35:56 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:35:58 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:35:58 - FlightCrawler - INFO - 查询表单填写成功: CA1234
+2025-09-28 13:35:58 - FlightCrawler - ERROR - 处理航班 CA1234 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:35:58 - FlightCrawler - ERROR - [CA1234] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:36:00 - FlightCrawler - INFO - [CZ3456] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 13:36:00 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:36:00 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:36:00 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:36:00 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:36:01 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:36:01 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:36:01 - FlightCrawler - INFO - 开始填写查询表单: CZ3456, 2025-09-19
+2025-09-28 13:36:01 - FlightCrawler - INFO - 正在填写航班信息: CZ3456, 2025-09-19
+2025-09-28 13:36:01 - FlightCrawler - INFO - 航班号填写成功: CZ3456
+2025-09-28 13:36:02 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:36:02 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:36:02 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:36:02 - FlightCrawler - INFO - ddddocr直接识别成功: djit
+2025-09-28 13:36:02 - FlightCrawler - INFO - [CZ3456] 验证码识别 - 成功 | 识别结果: djit
+2025-09-28 13:36:02 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:36:04 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:36:04 - FlightCrawler - INFO - 查询表单填写成功: CZ3456
+2025-09-28 13:36:04 - FlightCrawler - ERROR - 处理航班 CZ3456 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:36:04 - FlightCrawler - ERROR - [CZ3456] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:36:04 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-28 13:36:04 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:36:04 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 13:36:04 - FlightCrawler - INFO - 开始时间: 2025-09-28 13:35:16
+2025-09-28 13:36:04 - FlightCrawler - INFO - 结束时间: 2025-09-28 13:36:04
+2025-09-28 13:36:04 - FlightCrawler - INFO - 总耗时: 0:00:47.893750
+2025-09-28 13:36:04 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 13:36:04 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 13:36:04 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 13:36:04 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 13:36:04 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 13:36:04 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 13:36:04 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:38:06 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:38:06 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:38:06 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:38:06 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:38:06 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:38:06 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 13:38:06 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 13:38:06 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 13:38:06 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 13:38:06 - FlightCrawler - WARNING - 第2行数据验证失败: 无法解析日期格式: 2025-09-18_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:38:06 - FlightCrawler - WARNING - 第3行数据验证失败: 无法解析日期格式: 2025-09-16_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:38:06 - FlightCrawler - WARNING - 第4行数据验证失败: 航班号格式不正确: G54381 (应为2个字母+3-4个数字，如MU5100)
+2025-09-28 13:38:06 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=0, 错误数据=3
+2025-09-28 13:38:06 - FlightCrawler - WARNING - 发现 3 个数据错误:
+2025-09-28 13:38:06 - FlightCrawler - WARNING -   - 第2行数据验证失败: 无法解析日期格式: 2025-09-18_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:38:06 - FlightCrawler - WARNING -   - 第3行数据验证失败: 无法解析日期格式: 2025-09-16_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:38:06 - FlightCrawler - WARNING -   - 第4行数据验证失败: 航班号格式不正确: G54381 (应为2个字母+3-4个数字，如MU5100)
+2025-09-28 13:38:06 - FlightCrawler - ERROR - 异常发生在 input_handler.read_flight_data: ValueError: 没有找到有效的航班数据 | 上下文: file_path=input/sample_flights.xlsx
+2025-09-28 13:38:06 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\input_handler.py", line 73, in read_flight_data
+    validated_data = self._validate_and_clean_data(flight_data)
+  File "D:\code\dap\PCFlight\modules\input_handler.py", line 231, in _validate_and_clean_data
+    raise ValueError("没有找到有效的航班数据")
+ValueError: 没有找到有效的航班数据
+
+2025-09-28 13:38:06 - FlightCrawler - ERROR - 读取输入文件失败: 没有找到有效的航班数据
+2025-09-28 13:38:06 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:38:06 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 13:38:06 - FlightCrawler - INFO - 开始时间: 2025-09-28 13:38:06
+2025-09-28 13:38:06 - FlightCrawler - INFO - 结束时间: 2025-09-28 13:38:06
+2025-09-28 13:38:06 - FlightCrawler - INFO - 总耗时: 0:00:00.015922
+2025-09-28 13:38:06 - FlightCrawler - INFO - 总航班数: 0
+2025-09-28 13:38:06 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 13:38:06 - FlightCrawler - INFO - 航班成功率: 0%
+2025-09-28 13:38:06 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 13:38:06 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 13:38:06 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 13:38:06 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:39:32 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:39:32 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:39:32 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:39:32 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:39:32 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:39:32 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 13:39:32 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 13:39:32 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 13:39:32 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 13:39:32 - FlightCrawler - WARNING - 第2行数据验证失败: 无法解析日期格式: 2025-09-18_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:39:32 - FlightCrawler - WARNING - 第3行数据验证失败: 无法解析日期格式: 2025-09-16_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:39:32 - FlightCrawler - WARNING - 第4行数据验证失败: 航班号格式不正确: G54381 (应为2个字母+3-4个数字，如MU5100)
+2025-09-28 13:39:32 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=0, 错误数据=3
+2025-09-28 13:39:32 - FlightCrawler - WARNING - 发现 3 个数据错误:
+2025-09-28 13:39:32 - FlightCrawler - WARNING -   - 第2行数据验证失败: 无法解析日期格式: 2025-09-18_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:39:32 - FlightCrawler - WARNING -   - 第3行数据验证失败: 无法解析日期格式: 2025-09-16_x000d_ (支持格式: %Y-%m-%d, %Y/%m/%d, %m/%d/%Y, %d/%m/%Y, %Y%m%d)
+2025-09-28 13:39:32 - FlightCrawler - WARNING -   - 第4行数据验证失败: 航班号格式不正确: G54381 (应为2个字母+3-4个数字，如MU5100)
+2025-09-28 13:39:32 - FlightCrawler - ERROR - 异常发生在 input_handler.read_flight_data: ValueError: 没有找到有效的航班数据 | 上下文: file_path=input/sample_flights.xlsx
+2025-09-28 13:39:32 - FlightCrawler - ERROR - 堆栈跟踪:
+Traceback (most recent call last):
+  File "D:\code\dap\PCFlight\modules\input_handler.py", line 73, in read_flight_data
+    validated_data = self._validate_and_clean_data(flight_data)
+  File "D:\code\dap\PCFlight\modules\input_handler.py", line 231, in _validate_and_clean_data
+    raise ValueError("没有找到有效的航班数据")
+ValueError: 没有找到有效的航班数据
+
+2025-09-28 13:39:32 - FlightCrawler - ERROR - 读取输入文件失败: 没有找到有效的航班数据
+2025-09-28 13:39:32 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:39:32 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 13:39:32 - FlightCrawler - INFO - 开始时间: 2025-09-28 13:39:32
+2025-09-28 13:39:32 - FlightCrawler - INFO - 结束时间: 2025-09-28 13:39:32
+2025-09-28 13:39:32 - FlightCrawler - INFO - 总耗时: 0:00:00.014997
+2025-09-28 13:39:32 - FlightCrawler - INFO - 总航班数: 0
+2025-09-28 13:39:32 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 13:39:32 - FlightCrawler - INFO - 航班成功率: 0%
+2025-09-28 13:39:32 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 13:39:32 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 13:39:32 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 13:39:32 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:40:53 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:40:53 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:40:53 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:40:53 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:40:53 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:40:53 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 13:40:53 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 13:40:53 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 13:40:54 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 13:40:54 - FlightCrawler - WARNING - 第4行数据验证失败: 航班号格式不正确: G54381 (应为2个字母+3-4个数字，如MU5100)
+2025-09-28 13:40:54 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=2, 错误数据=1
+2025-09-28 13:40:54 - FlightCrawler - WARNING - 发现 1 个数据错误:
+2025-09-28 13:40:54 - FlightCrawler - WARNING -   - 第4行数据验证失败: 航班号格式不正确: G54381 (应为2个字母+3-4个数字，如MU5100)
+2025-09-28 13:40:54 - FlightCrawler - INFO - 成功读取 2 条航班信息
+2025-09-28 13:40:54 - FlightCrawler - INFO - 成功读取 2 条航班信息
+2025-09-28 13:40:54 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:40:54 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:40:54 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:40:54 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:40:54 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:40:54 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 13:41:00 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 13:41:00 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 13:41:00 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/2
+2025-09-28 13:41:00 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:41:00 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:41:00 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:41:00 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:41:01 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:41:01 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:41:01 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-19
+2025-09-28 13:41:01 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-19
+2025-09-28 13:41:01 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 13:41:02 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:41:02 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:41:02 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:41:02 - FlightCrawler - INFO - ddddocr直接识别成功: zucu
+2025-09-28 13:41:02 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: zucu
+2025-09-28 13:41:02 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:41:04 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:41:04 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 13:41:04 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:41:04 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:41:06 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/2
+2025-09-28 13:41:06 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:41:06 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:41:06 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:41:06 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:41:08 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:41:08 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:41:08 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-19
+2025-09-28 13:41:08 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-19
+2025-09-28 13:41:08 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 13:41:08 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:41:08 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:41:08 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:41:08 - FlightCrawler - INFO - ddddocr直接识别成功: vkrd
+2025-09-28 13:41:08 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: vkrd
+2025-09-28 13:41:08 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:41:10 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:41:10 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 13:41:10 - FlightCrawler - ERROR - 处理航班 CA1507 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:41:10 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:41:10 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-28 13:41:10 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:41:10 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 13:41:10 - FlightCrawler - INFO - 开始时间: 2025-09-28 13:40:53
+2025-09-28 13:41:10 - FlightCrawler - INFO - 结束时间: 2025-09-28 13:41:10
+2025-09-28 13:41:10 - FlightCrawler - INFO - 总耗时: 0:00:16.899613
+2025-09-28 13:41:10 - FlightCrawler - INFO - 总航班数: 2
+2025-09-28 13:41:10 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 13:41:10 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 13:41:10 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 13:41:10 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 13:41:10 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 13:41:10 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:53:08 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:53:08 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:53:08 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:53:08 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:53:08 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:53:08 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 13:53:08 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 13:53:08 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 13:53:08 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 13:53:08 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 13:53:08 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 13:53:08 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 13:53:08 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:53:08 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:53:08 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:53:08 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:53:08 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:53:08 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 13:53:13 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 13:53:13 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 13:53:13 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 13:53:13 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:53:13 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:53:14 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:53:14 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:53:15 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:53:15 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:53:15 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-19
+2025-09-28 13:53:15 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-19
+2025-09-28 13:53:15 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 13:53:16 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:53:16 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:53:16 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:53:16 - FlightCrawler - INFO - ddddocr直接识别成功: ebzn
+2025-09-28 13:53:16 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: ebzn
+2025-09-28 13:53:16 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:53:18 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:53:18 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 13:53:18 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:53:18 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:53:20 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 13:53:20 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:53:20 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:53:20 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:53:20 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:53:21 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:53:21 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:53:21 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-19
+2025-09-28 13:53:21 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-19
+2025-09-28 13:53:21 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 13:53:22 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:53:22 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:53:22 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:53:22 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-28 13:53:22 - FlightCrawler - ERROR - [CA1507] 验证码识别 - 失败 | OCR识别失败
+2025-09-28 13:53:23 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-28 13:53:24 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 2/6
+2025-09-28 13:53:24 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:53:24 - FlightCrawler - INFO - ddddocr 灰度放大锐化 识别成功: cvtt
+2025-09-28 13:53:24 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: cvtt
+2025-09-28 13:53:24 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:53:26 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:53:26 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 13:53:26 - FlightCrawler - ERROR - 处理航班 CA1507 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:53:26 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:53:28 - FlightCrawler - INFO - [G54381] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 13:53:28 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:53:28 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:53:29 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:53:29 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:53:30 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:53:30 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:53:30 - FlightCrawler - INFO - 开始填写查询表单: G54381, 2025-09-19
+2025-09-28 13:53:30 - FlightCrawler - INFO - 正在填写航班信息: G54381, 2025-09-19
+2025-09-28 13:53:30 - FlightCrawler - INFO - 航班号填写成功: G54381
+2025-09-28 13:53:30 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:53:30 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:53:30 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:53:30 - FlightCrawler - INFO - ddddocr直接识别成功: jbpw
+2025-09-28 13:53:31 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: jbpw
+2025-09-28 13:53:31 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:53:33 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:53:33 - FlightCrawler - INFO - 查询表单填写成功: G54381
+2025-09-28 13:53:33 - FlightCrawler - ERROR - 处理航班 G54381 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:53:33 - FlightCrawler - ERROR - [G54381] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:53:33 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-28 13:53:33 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:53:33 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 13:53:33 - FlightCrawler - INFO - 开始时间: 2025-09-28 13:53:08
+2025-09-28 13:53:33 - FlightCrawler - INFO - 结束时间: 2025-09-28 13:53:33
+2025-09-28 13:53:33 - FlightCrawler - INFO - 总耗时: 0:00:24.833680
+2025-09-28 13:53:33 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 13:53:33 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 13:53:33 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 13:53:33 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 13:53:33 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 13:53:33 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 13:53:33 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:58:12 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:58:12 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:58:12 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:58:12 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:58:12 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:58:12 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 13:58:12 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 13:58:12 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 13:58:12 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 13:58:12 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 13:58:12 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 13:58:12 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 13:58:12 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 13:58:12 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 13:58:12 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 13:58:12 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 13:58:12 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 13:58:12 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 13:58:17 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 13:58:17 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 13:58:17 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 13:58:17 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:58:17 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:58:18 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:58:18 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:58:19 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:58:19 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:58:19 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-19
+2025-09-28 13:58:19 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-19
+2025-09-28 13:58:19 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 13:58:19 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:58:19 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:58:19 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:58:20 - FlightCrawler - INFO - ddddocr直接识别成功: quiy
+2025-09-28 13:58:20 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: quiy
+2025-09-28 13:58:20 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:58:22 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:58:22 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 13:58:22 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:58:22 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:58:24 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 13:58:24 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:58:24 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:58:24 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:58:24 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:58:25 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:58:25 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:58:25 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-19
+2025-09-28 13:58:25 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-19
+2025-09-28 13:58:25 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 13:58:26 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:58:26 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:58:26 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:58:26 - FlightCrawler - INFO - ddddocr直接识别成功: vzdf
+2025-09-28 13:58:26 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: vzdf
+2025-09-28 13:58:26 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:58:28 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:58:28 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 13:58:28 - FlightCrawler - ERROR - 处理航班 CA1507 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:58:28 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:58:30 - FlightCrawler - INFO - [G54381] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 13:58:30 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 13:58:30 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 13:58:31 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 13:58:31 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 13:58:32 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 13:58:32 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 13:58:32 - FlightCrawler - INFO - 开始填写查询表单: G54381, 2025-09-19
+2025-09-28 13:58:32 - FlightCrawler - INFO - 正在填写航班信息: G54381, 2025-09-19
+2025-09-28 13:58:32 - FlightCrawler - INFO - 航班号填写成功: G54381
+2025-09-28 13:58:33 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 13:58:33 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 13:58:33 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 13:58:33 - FlightCrawler - INFO - ddddocr 保守预处理 识别成功: ithm
+2025-09-28 13:58:33 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: ithm
+2025-09-28 13:58:33 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 13:58:35 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 13:58:35 - FlightCrawler - INFO - 查询表单填写成功: G54381
+2025-09-28 13:58:35 - FlightCrawler - ERROR - 处理航班 G54381 时发生异常: 'WebAutomation' object has no attribute 'handle_captcha_and_submit'
+2025-09-28 13:58:35 - FlightCrawler - ERROR - [G54381] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 13:58:35 - FlightCrawler - ERROR - 关闭浏览器时发生异常: 'WebAutomation' object has no attribute 'close_browser'
+2025-09-28 13:58:35 - FlightCrawler - INFO - ==================================================
+2025-09-28 13:58:35 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 13:58:35 - FlightCrawler - INFO - 开始时间: 2025-09-28 13:58:12
+2025-09-28 13:58:35 - FlightCrawler - INFO - 结束时间: 2025-09-28 13:58:35
+2025-09-28 13:58:35 - FlightCrawler - INFO - 总耗时: 0:00:23.198975
+2025-09-28 13:58:35 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 13:58:35 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 13:58:35 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 13:58:35 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 13:58:35 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 13:58:35 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 13:58:35 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:02:32 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:02:32 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:02:32 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:02:32 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:02:32 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:02:32 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 14:02:32 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 14:02:32 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 14:02:32 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 14:02:32 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 14:02:32 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:02:32 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:02:32 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:02:32 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:02:32 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:02:32 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:02:32 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:02:32 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 14:02:37 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 14:02:37 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 14:02:37 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 14:02:37 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:02:37 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:02:38 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:02:38 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:02:39 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:02:39 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:02:39 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-19
+2025-09-28 14:02:39 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-19
+2025-09-28 14:02:39 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 14:02:40 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 14:02:40 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:02:40 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:02:40 - FlightCrawler - INFO - ddddocr直接识别成功: wuuy
+2025-09-28 14:02:40 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: wuuy
+2025-09-28 14:02:40 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:02:42 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:02:42 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 14:02:42 - FlightCrawler - ERROR - 处理航班 MU5100 时发生异常: handle_captcha_and_submit() missing 1 required positional argument: 'flight_number'
+2025-09-28 14:02:42 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:02:44 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 14:02:44 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:02:44 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:02:44 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:02:44 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:02:46 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:02:46 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:02:46 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-19
+2025-09-28 14:02:46 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-19
+2025-09-28 14:02:46 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 14:02:46 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 14:02:46 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:02:46 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:02:46 - FlightCrawler - INFO - ddddocr直接识别成功: tesa
+2025-09-28 14:02:46 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: tesa
+2025-09-28 14:02:46 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:02:48 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:02:48 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 14:02:48 - FlightCrawler - ERROR - 处理航班 CA1507 时发生异常: handle_captcha_and_submit() missing 1 required positional argument: 'flight_number'
+2025-09-28 14:02:48 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:02:51 - FlightCrawler - INFO - [G54381] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 14:02:51 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:02:51 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:02:51 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:02:51 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:02:52 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:02:52 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:02:52 - FlightCrawler - INFO - 开始填写查询表单: G54381, 2025-09-19
+2025-09-28 14:02:52 - FlightCrawler - INFO - 正在填写航班信息: G54381, 2025-09-19
+2025-09-28 14:02:52 - FlightCrawler - INFO - 航班号填写成功: G54381
+2025-09-28 14:02:53 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 14:02:53 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:02:53 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:02:53 - FlightCrawler - INFO - ddddocr直接识别成功: ebtr
+2025-09-28 14:02:53 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: ebtr
+2025-09-28 14:02:53 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:02:55 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:02:55 - FlightCrawler - INFO - 查询表单填写成功: G54381
+2025-09-28 14:02:55 - FlightCrawler - ERROR - 处理航班 G54381 时发生异常: handle_captcha_and_submit() missing 1 required positional argument: 'flight_number'
+2025-09-28 14:02:55 - FlightCrawler - ERROR - [G54381] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:02:58 - FlightCrawler - INFO - 浏览器已关闭
+2025-09-28 14:02:58 - FlightCrawler - INFO - [SYSTEM] 浏览器已关闭
+2025-09-28 14:02:58 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:02:58 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 14:02:58 - FlightCrawler - INFO - 开始时间: 2025-09-28 14:02:32
+2025-09-28 14:02:58 - FlightCrawler - INFO - 结束时间: 2025-09-28 14:02:58
+2025-09-28 14:02:58 - FlightCrawler - INFO - 总耗时: 0:00:25.620795
+2025-09-28 14:02:58 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 14:02:58 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 14:02:58 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 14:02:58 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 14:02:58 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 14:02:58 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 14:02:58 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:03:47 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:03:47 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:03:47 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:03:47 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:03:47 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:03:47 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 14:03:47 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 14:03:47 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 14:03:47 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 14:03:47 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 14:03:47 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:03:47 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:03:47 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:03:47 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:03:47 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:03:47 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:03:47 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:03:47 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 14:03:52 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 14:03:52 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 14:03:52 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 14:03:52 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:03:52 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:03:53 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:03:53 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:03:54 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:03:54 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:03:54 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-19
+2025-09-28 14:03:54 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-19
+2025-09-28 14:03:54 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 14:03:55 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 14:03:55 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:03:55 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:03:55 - FlightCrawler - INFO - ddddocr直接识别成功: lqcv
+2025-09-28 14:03:55 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: lqcv
+2025-09-28 14:03:55 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:03:57 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:03:57 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 14:03:57 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:03:57 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:03:57 - FlightCrawler - INFO - ddddocr直接识别成功: lqcv
+2025-09-28 14:03:57 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: lqcv
+2025-09-28 14:03:57 - FlightCrawler - INFO - [MU5100] 提交查询 - 开始
+2025-09-28 14:03:59 - FlightCrawler - INFO - [MU5100] 提交查询 - 成功
+2025-09-28 14:04:02 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:04:02 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:04:02 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:04:02 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:04:02 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:04:02 - FlightCrawler - INFO - [MU5100] 数据提取 - 开始
+2025-09-28 14:04:13 - FlightCrawler - ERROR - [MU5100] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:04:13 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:04:15 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 14:04:15 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:04:15 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:04:15 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:04:15 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:04:16 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:04:16 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:04:16 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-19
+2025-09-28 14:04:16 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-19
+2025-09-28 14:04:16 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 14:04:17 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 14:04:17 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:04:17 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:04:17 - FlightCrawler - INFO - ddddocr直接识别成功: hmlq
+2025-09-28 14:04:17 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: hmlq
+2025-09-28 14:04:17 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:04:19 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:04:19 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 14:04:19 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:04:19 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:04:19 - FlightCrawler - INFO - ddddocr直接识别成功: hmlq
+2025-09-28 14:04:19 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: hmlq
+2025-09-28 14:04:19 - FlightCrawler - INFO - [CA1507] 提交查询 - 开始
+2025-09-28 14:04:21 - FlightCrawler - INFO - [CA1507] 提交查询 - 成功
+2025-09-28 14:04:24 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:04:24 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:04:24 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:04:24 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:04:24 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:04:24 - FlightCrawler - INFO - [CA1507] 数据提取 - 开始
+2025-09-28 14:04:34 - FlightCrawler - ERROR - [CA1507] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:04:34 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:04:36 - FlightCrawler - INFO - [G54381] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 14:04:36 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:04:36 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:04:37 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:04:37 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:04:38 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:04:38 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:04:38 - FlightCrawler - INFO - 开始填写查询表单: G54381, 2025-09-19
+2025-09-28 14:04:38 - FlightCrawler - INFO - 正在填写航班信息: G54381, 2025-09-19
+2025-09-28 14:04:38 - FlightCrawler - INFO - 航班号填写成功: G54381
+2025-09-28 14:04:38 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-19
+2025-09-28 14:04:38 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:04:38 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:04:39 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-28 14:04:39 - FlightCrawler - ERROR - [G54381] 验证码识别 - 失败 | OCR识别失败
+2025-09-28 14:04:40 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-28 14:04:41 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 2/6
+2025-09-28 14:04:41 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:04:41 - FlightCrawler - INFO - ddddocr直接识别成功: xbti
+2025-09-28 14:04:41 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: xbti
+2025-09-28 14:04:41 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:04:43 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:04:43 - FlightCrawler - INFO - 查询表单填写成功: G54381
+2025-09-28 14:04:43 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:04:43 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:04:43 - FlightCrawler - INFO - ddddocr直接识别成功: xbti
+2025-09-28 14:04:43 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: xbti
+2025-09-28 14:04:43 - FlightCrawler - INFO - [G54381] 提交查询 - 开始
+2025-09-28 14:04:45 - FlightCrawler - INFO - [G54381] 提交查询 - 成功
+2025-09-28 14:04:48 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:04:48 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:04:48 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:04:48 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:04:48 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:04:48 - FlightCrawler - INFO - [G54381] 数据提取 - 开始
+2025-09-28 14:04:58 - FlightCrawler - ERROR - [G54381] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:04:58 - FlightCrawler - ERROR - [G54381] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:05:01 - FlightCrawler - INFO - 浏览器已关闭
+2025-09-28 14:05:01 - FlightCrawler - INFO - [SYSTEM] 浏览器已关闭
+2025-09-28 14:05:01 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:05:01 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 14:05:01 - FlightCrawler - INFO - 开始时间: 2025-09-28 14:03:47
+2025-09-28 14:05:01 - FlightCrawler - INFO - 结束时间: 2025-09-28 14:05:01
+2025-09-28 14:05:01 - FlightCrawler - INFO - 总耗时: 0:01:13.655978
+2025-09-28 14:05:01 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 14:05:01 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 14:05:01 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 14:05:01 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 14:05:01 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 14:05:01 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 14:05:01 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:06:12 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:06:12 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:06:12 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:06:12 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:06:12 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:06:12 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 14:06:12 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 14:06:12 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 14:06:12 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 14:06:12 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 14:06:12 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:06:12 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:06:12 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:06:12 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:06:12 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:06:12 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:06:12 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:06:12 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 14:06:18 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 14:06:18 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 14:06:18 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 14:06:18 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:06:18 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:06:19 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:06:19 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:06:20 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:06:20 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:06:20 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-25
+2025-09-28 14:06:20 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-25
+2025-09-28 14:06:20 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 14:06:20 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-25
+2025-09-28 14:06:20 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:06:20 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:06:21 - FlightCrawler - INFO - ddddocr直接识别成功: tnrd
+2025-09-28 14:06:21 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: tnrd
+2025-09-28 14:06:21 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:06:23 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:06:23 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 14:06:23 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:06:23 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:06:23 - FlightCrawler - INFO - ddddocr直接识别成功: tnrd
+2025-09-28 14:06:23 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: tnrd
+2025-09-28 14:06:23 - FlightCrawler - INFO - [MU5100] 提交查询 - 开始
+2025-09-28 14:06:25 - FlightCrawler - INFO - [MU5100] 提交查询 - 成功
+2025-09-28 14:06:28 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:06:28 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:06:28 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:06:28 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:06:28 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:06:28 - FlightCrawler - INFO - [MU5100] 数据提取 - 开始
+2025-09-28 14:06:38 - FlightCrawler - ERROR - [MU5100] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:06:38 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:06:40 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 14:06:40 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:06:40 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:06:41 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:06:41 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:06:42 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:06:42 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:06:42 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-25
+2025-09-28 14:06:42 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-25
+2025-09-28 14:06:42 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 14:06:43 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-25
+2025-09-28 14:06:43 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:06:43 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:06:43 - FlightCrawler - INFO - ddddocr直接识别成功: kqrj
+2025-09-28 14:06:43 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: kqrj
+2025-09-28 14:06:43 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:06:45 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:06:45 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 14:06:45 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:06:45 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:06:45 - FlightCrawler - INFO - ddddocr直接识别成功: kqrj
+2025-09-28 14:06:45 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: kqrj
+2025-09-28 14:06:45 - FlightCrawler - INFO - [CA1507] 提交查询 - 开始
+2025-09-28 14:06:47 - FlightCrawler - INFO - [CA1507] 提交查询 - 成功
+2025-09-28 14:06:51 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:06:51 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:06:51 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:06:51 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:06:51 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:06:51 - FlightCrawler - INFO - [CA1507] 数据提取 - 开始
+2025-09-28 14:07:01 - FlightCrawler - ERROR - [CA1507] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:07:01 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:07:03 - FlightCrawler - INFO - [G54381] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 14:07:03 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:07:03 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:07:03 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:07:03 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:07:04 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:07:04 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:07:04 - FlightCrawler - INFO - 开始填写查询表单: G54381, 2025-09-25
+2025-09-28 14:07:04 - FlightCrawler - INFO - 正在填写航班信息: G54381, 2025-09-25
+2025-09-28 14:07:04 - FlightCrawler - INFO - 航班号填写成功: G54381
+2025-09-28 14:07:05 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-25
+2025-09-28 14:07:05 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:07:05 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:07:05 - FlightCrawler - INFO - ddddocr 灰度放大锐化 识别成功: fntc
+2025-09-28 14:07:05 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: fntc
+2025-09-28 14:07:05 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:07:07 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:07:07 - FlightCrawler - INFO - 查询表单填写成功: G54381
+2025-09-28 14:07:07 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:07:07 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:07:07 - FlightCrawler - INFO - ddddocr 灰度放大锐化 识别成功: fntc
+2025-09-28 14:07:07 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: fntc
+2025-09-28 14:07:07 - FlightCrawler - INFO - [G54381] 提交查询 - 开始
+2025-09-28 14:07:09 - FlightCrawler - INFO - [G54381] 提交查询 - 成功
+2025-09-28 14:07:12 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:07:12 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:07:12 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:07:12 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:07:12 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:07:12 - FlightCrawler - INFO - [G54381] 数据提取 - 开始
+2025-09-28 14:07:22 - FlightCrawler - ERROR - [G54381] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:07:22 - FlightCrawler - ERROR - [G54381] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:07:25 - FlightCrawler - INFO - 浏览器已关闭
+2025-09-28 14:07:25 - FlightCrawler - INFO - [SYSTEM] 浏览器已关闭
+2025-09-28 14:07:25 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:07:25 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 14:07:25 - FlightCrawler - INFO - 开始时间: 2025-09-28 14:06:12
+2025-09-28 14:07:25 - FlightCrawler - INFO - 结束时间: 2025-09-28 14:07:25
+2025-09-28 14:07:25 - FlightCrawler - INFO - 总耗时: 0:01:12.756959
+2025-09-28 14:07:25 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 14:07:25 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 14:07:25 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 14:07:25 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 14:07:25 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 14:07:25 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 14:07:25 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:10:15 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:10:15 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:10:15 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:10:15 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:10:15 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:10:15 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 14:10:15 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 14:10:15 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 14:10:15 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 14:10:15 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 14:10:15 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:10:15 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:10:15 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:10:15 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:10:15 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:10:15 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:10:15 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:10:15 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 14:10:21 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 14:10:21 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 14:10:21 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 14:10:21 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:10:21 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:10:21 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:10:21 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:10:22 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:10:22 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:10:22 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-25
+2025-09-28 14:10:22 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-25
+2025-09-28 14:10:23 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 14:10:23 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-25
+2025-09-28 14:10:23 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:10:23 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:10:23 - FlightCrawler - INFO - ddddocr直接识别成功: knyq
+2025-09-28 14:10:23 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: knyq
+2025-09-28 14:10:23 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:10:25 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:10:25 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 14:10:25 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:10:25 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:10:26 - FlightCrawler - INFO - ddddocr直接识别成功: knyq
+2025-09-28 14:10:26 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: knyq
+2025-09-28 14:10:26 - FlightCrawler - INFO - [MU5100] 提交查询 - 开始
+2025-09-28 14:10:28 - FlightCrawler - INFO - [MU5100] 提交查询 - 成功
+2025-09-28 14:10:31 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:10:31 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:10:31 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:10:31 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:10:31 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:10:31 - FlightCrawler - INFO - [MU5100] 数据提取 - 开始
+2025-09-28 14:10:41 - FlightCrawler - ERROR - [MU5100] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:10:41 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:10:43 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 14:10:43 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:10:43 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:10:44 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:10:44 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:10:45 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:10:45 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:10:45 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-25
+2025-09-28 14:10:45 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-25
+2025-09-28 14:10:46 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 14:10:46 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-25
+2025-09-28 14:10:46 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:10:46 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:10:46 - FlightCrawler - INFO - ddddocr直接识别成功: glmy
+2025-09-28 14:10:46 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: glmy
+2025-09-28 14:10:46 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:10:48 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:10:48 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 14:10:48 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:10:48 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:10:48 - FlightCrawler - INFO - ddddocr直接识别成功: glmy
+2025-09-28 14:10:49 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: glmy
+2025-09-28 14:10:49 - FlightCrawler - INFO - [CA1507] 提交查询 - 开始
+2025-09-28 14:10:51 - FlightCrawler - INFO - [CA1507] 提交查询 - 成功
+2025-09-28 14:10:54 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:10:54 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:10:54 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:10:54 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:10:54 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:10:54 - FlightCrawler - INFO - [CA1507] 数据提取 - 开始
+2025-09-28 14:11:04 - FlightCrawler - ERROR - [CA1507] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:11:04 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:11:06 - FlightCrawler - INFO - [G54381] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 14:11:06 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:11:06 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:11:06 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:11:06 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:11:07 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:11:07 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:11:07 - FlightCrawler - INFO - 开始填写查询表单: G54381, 2025-09-25
+2025-09-28 14:11:07 - FlightCrawler - INFO - 正在填写航班信息: G54381, 2025-09-25
+2025-09-28 14:11:07 - FlightCrawler - INFO - 航班号填写成功: G54381
+2025-09-28 14:11:08 - FlightCrawler - INFO - 出发日期填写成功: 2025-09-25
+2025-09-28 14:11:08 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:11:08 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:11:08 - FlightCrawler - INFO - ddddocr 灰度放大锐化 识别成功: tbbj
+2025-09-28 14:11:08 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: tbbj
+2025-09-28 14:11:08 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:11:10 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:11:10 - FlightCrawler - INFO - 查询表单填写成功: G54381
+2025-09-28 14:11:10 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:11:10 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:11:10 - FlightCrawler - INFO - ddddocr 灰度放大锐化 识别成功: tbbj
+2025-09-28 14:11:10 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: tbbj
+2025-09-28 14:11:10 - FlightCrawler - INFO - [G54381] 提交查询 - 开始
+2025-09-28 14:11:12 - FlightCrawler - INFO - [G54381] 提交查询 - 成功
+2025-09-28 14:11:15 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:11:15 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:11:15 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:11:15 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:11:15 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:11:15 - FlightCrawler - INFO - [G54381] 数据提取 - 开始
+2025-09-28 14:11:25 - FlightCrawler - ERROR - [G54381] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:11:25 - FlightCrawler - ERROR - [G54381] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:11:28 - FlightCrawler - INFO - 浏览器已关闭
+2025-09-28 14:11:28 - FlightCrawler - INFO - [SYSTEM] 浏览器已关闭
+2025-09-28 14:11:28 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:11:28 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 14:11:28 - FlightCrawler - INFO - 开始时间: 2025-09-28 14:10:15
+2025-09-28 14:11:28 - FlightCrawler - INFO - 结束时间: 2025-09-28 14:11:28
+2025-09-28 14:11:28 - FlightCrawler - INFO - 总耗时: 0:01:12.550829
+2025-09-28 14:11:28 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 14:11:28 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 14:11:28 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 14:11:28 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 14:11:28 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 14:11:28 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 14:11:28 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:18:03 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:18:03 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:18:03 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:18:03 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:18:03 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:18:03 - FlightCrawler - INFO - [SYSTEM] 航班数据爬虫系统初始化完成
+2025-09-28 14:18:03 - FlightCrawler - INFO - [SYSTEM] 开始运行航班数据爬取，输入文件: input/sample_flights.xlsx
+2025-09-28 14:18:03 - FlightCrawler - INFO - 开始读取Excel文件: input/sample_flights.xlsx
+2025-09-28 14:18:03 - FlightCrawler - INFO - 数据开始行: 2
+2025-09-28 14:18:03 - FlightCrawler - INFO - 数据验证完成: 总行数=3, 有效数据=3, 错误数据=0
+2025-09-28 14:18:03 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:18:03 - FlightCrawler - INFO - 成功读取 3 条航班信息
+2025-09-28 14:18:03 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:18:03 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:18:03 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:18:03 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:18:03 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:18:03 - FlightCrawler - INFO - 正在启动Chrome浏览器...
+2025-09-28 14:18:09 - FlightCrawler - INFO - Chrome浏览器启动成功
+2025-09-28 14:18:09 - FlightCrawler - INFO - [SYSTEM] 浏览器初始化成功
+2025-09-28 14:18:09 - FlightCrawler - INFO - [MU5100] 航班处理 - 开始 | 进度: 1/3
+2025-09-28 14:18:09 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:18:09 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:18:10 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:18:10 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:18:11 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:18:11 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:18:11 - FlightCrawler - INFO - 开始填写查询表单: MU5100, 2025-09-25
+2025-09-28 14:18:11 - FlightCrawler - INFO - 正在填写航班信息: MU5100, 2025-09-25
+2025-09-28 14:18:11 - FlightCrawler - INFO - 航班号填写成功: MU5100
+2025-09-28 14:18:12 - FlightCrawler - WARNING - 出发日期填写异常: 期望=2025-09-25, 实际=
+2025-09-28 14:18:12 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:18:12 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:18:12 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-28 14:18:12 - FlightCrawler - ERROR - [MU5100] 验证码识别 - 失败 | OCR识别失败
+2025-09-28 14:18:14 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-28 14:18:15 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 2/6
+2025-09-28 14:18:15 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:18:15 - FlightCrawler - INFO - ddddocr直接识别成功: jfst
+2025-09-28 14:18:15 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: jfst
+2025-09-28 14:18:15 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:18:17 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:18:17 - FlightCrawler - INFO - 查询表单填写成功: MU5100
+2025-09-28 14:18:17 - FlightCrawler - INFO - [MU5100] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:18:17 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:18:17 - FlightCrawler - INFO - ddddocr直接识别成功: jfst
+2025-09-28 14:18:17 - FlightCrawler - INFO - [MU5100] 验证码识别 - 成功 | 识别结果: jfst
+2025-09-28 14:18:17 - FlightCrawler - INFO - [MU5100] 提交查询 - 开始
+2025-09-28 14:18:19 - FlightCrawler - INFO - [MU5100] 提交查询 - 成功
+2025-09-28 14:18:22 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:18:22 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:18:22 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:18:22 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:18:22 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:18:22 - FlightCrawler - INFO - [MU5100] 数据提取 - 开始
+2025-09-28 14:18:32 - FlightCrawler - ERROR - [MU5100] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:18:32 - FlightCrawler - ERROR - [MU5100] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:18:34 - FlightCrawler - INFO - [CA1507] 航班处理 - 开始 | 进度: 2/3
+2025-09-28 14:18:34 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:18:34 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:18:34 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:18:34 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:18:35 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:18:35 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:18:35 - FlightCrawler - INFO - 开始填写查询表单: CA1507, 2025-09-25
+2025-09-28 14:18:35 - FlightCrawler - INFO - 正在填写航班信息: CA1507, 2025-09-25
+2025-09-28 14:18:35 - FlightCrawler - INFO - 航班号填写成功: CA1507
+2025-09-28 14:18:37 - FlightCrawler - WARNING - 出发日期填写异常: 期望=2025-09-25, 实际=
+2025-09-28 14:18:37 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:18:37 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:18:37 - FlightCrawler - INFO - ddddocr直接识别成功: etdg
+2025-09-28 14:18:37 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: etdg
+2025-09-28 14:18:37 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:18:39 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:18:39 - FlightCrawler - INFO - 查询表单填写成功: CA1507
+2025-09-28 14:18:39 - FlightCrawler - INFO - [CA1507] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:18:39 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:18:39 - FlightCrawler - INFO - ddddocr直接识别成功: etdg
+2025-09-28 14:18:39 - FlightCrawler - INFO - [CA1507] 验证码识别 - 成功 | 识别结果: etdg
+2025-09-28 14:18:39 - FlightCrawler - INFO - [CA1507] 提交查询 - 开始
+2025-09-28 14:18:41 - FlightCrawler - INFO - [CA1507] 提交查询 - 成功
+2025-09-28 14:18:44 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:18:44 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:18:44 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:18:44 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:18:44 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:18:44 - FlightCrawler - INFO - [CA1507] 数据提取 - 开始
+2025-09-28 14:18:54 - FlightCrawler - ERROR - [CA1507] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:18:54 - FlightCrawler - ERROR - [CA1507] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:18:56 - FlightCrawler - INFO - [G54381] 航班处理 - 开始 | 进度: 3/3
+2025-09-28 14:18:56 - FlightCrawler - INFO - 开始导航到查询页面
+2025-09-28 14:18:56 - FlightCrawler - INFO - 正在访问航班查询页面: https://tool.133.cn/flight/
+2025-09-28 14:18:57 - FlightCrawler - INFO - 航班查询页面加载成功
+2025-09-28 14:18:57 - FlightCrawler - INFO - 正在点击'按航班号'按钮
+2025-09-28 14:18:58 - FlightCrawler - INFO - '按航班号'按钮点击成功
+2025-09-28 14:18:58 - FlightCrawler - INFO - 查询页面导航成功
+2025-09-28 14:18:58 - FlightCrawler - INFO - 开始填写查询表单: G54381, 2025-09-25
+2025-09-28 14:18:58 - FlightCrawler - INFO - 正在填写航班信息: G54381, 2025-09-25
+2025-09-28 14:18:58 - FlightCrawler - INFO - 航班号填写成功: G54381
+2025-09-28 14:19:00 - FlightCrawler - WARNING - 出发日期填写异常: 期望=2025-09-25, 实际=
+2025-09-28 14:19:00 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:19:00 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:19:00 - FlightCrawler - ERROR - 验证码识别失败，已尝试 1 次
+2025-09-28 14:19:00 - FlightCrawler - ERROR - [G54381] 验证码识别 - 失败 | OCR识别失败
+2025-09-28 14:19:01 - FlightCrawler - INFO - 验证码图片已刷新
+2025-09-28 14:19:02 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 2/6
+2025-09-28 14:19:02 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:19:02 - FlightCrawler - INFO - ddddocr 保守预处理 识别成功: ulut
+2025-09-28 14:19:02 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: ulut
+2025-09-28 14:19:02 - FlightCrawler - INFO - 正在点击查询按钮
+2025-09-28 14:19:04 - FlightCrawler - INFO - 查询按钮点击成功
+2025-09-28 14:19:04 - FlightCrawler - INFO - 查询表单填写成功: G54381
+2025-09-28 14:19:04 - FlightCrawler - INFO - [G54381] 验证码识别 - 开始 | 尝试 1/6
+2025-09-28 14:19:04 - FlightCrawler - INFO - 验证码识别尝试 1/1
+2025-09-28 14:19:04 - FlightCrawler - INFO - ddddocr 保守预处理 识别成功: ulut
+2025-09-28 14:19:04 - FlightCrawler - INFO - [G54381] 验证码识别 - 成功 | 识别结果: ulut
+2025-09-28 14:19:04 - FlightCrawler - INFO - [G54381] 提交查询 - 开始
+2025-09-28 14:19:06 - FlightCrawler - INFO - [G54381] 提交查询 - 成功
+2025-09-28 14:19:09 - FlightCrawler - INFO - ddddocr引擎初始化成功
+2025-09-28 14:19:09 - FlightCrawler - INFO - 使用OCR引擎: ddddocr
+2025-09-28 14:19:09 - FlightCrawler - INFO - ddddocr可用: True
+2025-09-28 14:19:09 - FlightCrawler - INFO - PaddleOCR可用: False
+2025-09-28 14:19:09 - FlightCrawler - INFO - Tesseract可用: True
+2025-09-28 14:19:09 - FlightCrawler - INFO - [G54381] 数据提取 - 开始
+2025-09-28 14:19:19 - FlightCrawler - ERROR - [G54381] 数据提取 - 失败 | 未找到结果列表
+2025-09-28 14:19:19 - FlightCrawler - ERROR - [G54381] 航班处理 - 失败 | 未提取到有效数据
+2025-09-28 14:19:22 - FlightCrawler - INFO - 浏览器已关闭
+2025-09-28 14:19:22 - FlightCrawler - INFO - [SYSTEM] 浏览器已关闭
+2025-09-28 14:19:22 - FlightCrawler - INFO - ==================================================
+2025-09-28 14:19:22 - FlightCrawler - INFO - 航班数据爬取完成 - 最终统计
+2025-09-28 14:19:22 - FlightCrawler - INFO - 开始时间: 2025-09-28 14:18:03
+2025-09-28 14:19:22 - FlightCrawler - INFO - 结束时间: 2025-09-28 14:19:22
+2025-09-28 14:19:22 - FlightCrawler - INFO - 总耗时: 0:01:18.353167
+2025-09-28 14:19:22 - FlightCrawler - INFO - 总航班数: 3
+2025-09-28 14:19:22 - FlightCrawler - INFO - 成功航班数: 0
+2025-09-28 14:19:22 - FlightCrawler - INFO - 航班成功率: 0.00%
+2025-09-28 14:19:22 - FlightCrawler - INFO - 总航段数: 0
+2025-09-28 14:19:22 - FlightCrawler - INFO - 成功航段数: 0
+2025-09-28 14:19:22 - FlightCrawler - INFO - 航段成功率: 0%
+2025-09-28 14:19:22 - FlightCrawler - INFO - ==================================================

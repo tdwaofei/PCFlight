@@ -141,6 +141,12 @@ class WebAutomation:
         except Exception as e:
             if self.logger:
                 log_exception('web_automation', 'stop_browser', e)
+
+    def close_browser(self) -> None:
+        """
+        关闭浏览器（stop_browser的别名）
+        """
+        self.stop_browser()
     
     def navigate_to_flight_page(self) -> bool:
         """
@@ -256,8 +262,15 @@ class WebAutomation:
                     # 输入日期
                     date_input.send_keys(departure_date)
                     
+                    # 验证日期是否正确填写
+                    time.sleep(0.5)  # 等待日期控件更新
+                    actual_value = date_input.get_attribute('value')
+                    
                     if self.logger:
-                        self.logger.info(f"出发日期填写成功: {departure_date}")
+                        if actual_value == departure_date:
+                            self.logger.info(f"出发日期填写成功: {departure_date} (验证通过)")
+                        else:
+                            self.logger.warning(f"出发日期填写异常: 期望={departure_date}, 实际={actual_value}")
                         
                 except Exception as date_error:
                     if self.logger:
@@ -270,8 +283,15 @@ class WebAutomation:
                         # 触发change事件
                         self.driver.execute_script("arguments[0].dispatchEvent(new Event('change'));", date_input)
                         
+                        # 验证JavaScript方法是否成功
+                        time.sleep(0.5)
+                        actual_value = date_input.get_attribute('value')
+                        
                         if self.logger:
-                            self.logger.info(f"使用JavaScript方法填写日期成功: {departure_date}")
+                            if actual_value == departure_date:
+                                self.logger.info(f"使用JavaScript方法填写日期成功: {departure_date} (验证通过)")
+                            else:
+                                self.logger.warning(f"JavaScript方法填写日期异常: 期望={departure_date}, 实际={actual_value}")
                     except Exception as js_error:
                         if self.logger:
                             self.logger.error(f"JavaScript方法也失败: {str(js_error)}")
@@ -285,6 +305,23 @@ class WebAutomation:
                             {'flight_number': flight_number, 'departure_date': departure_date})
             return False
     
+    def handle_captcha_and_submit(self, flight_number: str) -> bool:
+        """
+        处理验证码并提交查询（带重试机制）
+        
+        Args:
+            flight_number: 当前处理的航班号（用于日志）
+            
+        Returns:
+            是否处理成功
+        """
+        # 先处理验证码
+        if not self.handle_captcha(flight_number):
+            return False
+        
+        # 然后提交查询
+        return self.submit_query(flight_number)
+
     def handle_captcha(self, flight_number: str) -> bool:
         """
         处理验证码（带重试机制）

@@ -259,7 +259,7 @@ class FlightCrawler:
                 return []
             
             # 处理验证码并提交查询
-            if not self.web_automation.handle_captcha_and_submit():
+            if not self.web_automation.handle_captcha_and_submit(flight_number):
                 if self.logger:
                     log_flight_process(flight_number, "验证码处理", "失败")
                 return []

@@ -89,7 +89,7 @@ class ConfigManager:
                 "flight_number_button": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[1]/span[2]",
                 "flight_number_input": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[4]/div/input",
                 "departure_date_input": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[5]/div/input",
-                "captcha_input": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[6]/div/input",
+                "captcha_input": "/html/body/div[1]/div[2]/div[1]/div/div[1]/div/div[6]/div/input",
                 "captcha_image": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/div[6]/img",
                 "query_button": "/html/body/div[1]/div[2]/div[1]/div[1]/div/div/button",
                 "result_list": "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]",

@@ -32,7 +32,10 @@ class InputHandler:
         """
         self.logger = get_logger()
         self.supported_extensions = ['.xlsx', '.xls']
-        self.flight_number_pattern = re.compile(r'^[A-Z]{2}\d{3,4}$')  # 航班号格式：两个字母+3-4个数字
+        # 航班号格式：前2位必须是字母或数字，后面3-4位必须是数字
+        # 但不能是纯数字（如12345）或只有1位前缀（如M5100）
+        # 例如：MU5100, G54381, 3U8888, CA1234等
+        self.flight_number_pattern = re.compile(r'^[A-Z0-9]{2}\d{3,4}$')
         self.date_formats = [
             '%Y-%m-%d',
             '%Y/%m/%d',
@@ -246,15 +249,23 @@ class InputHandler:
         if not flight_number:
             return None
         
-        # 转换为字符串并清理
-        flight_str = str(flight_number).strip().upper()
+        # 转换为字符串并清理基本空白字符
+        flight_str = str(flight_number).strip()
         
-        # 移除常见的无关字符
-        flight_str = re.sub(r'[\s\-_]', '', flight_str)
+        # 检查是否为空
+        if not flight_str:
+            return None
         
-        # 验证航班号格式
+        # 检查是否包含不允许的字符（允许字母、数字，大小写均可）
+        if not re.match(r'^[A-Za-z0-9]+$', flight_str):
+            raise ValueError(f"航班号格式不正确: {flight_number} (包含无效字符，只允许字母和数字)")
+        
+        # 转换为大写进行后续验证
+        flight_str = flight_str.upper()
+        
+        # 验证航班号格式：2位字母或数字 + 3-4位数字
         if not self.flight_number_pattern.match(flight_str):
-            raise ValueError(f"航班号格式不正确: {flight_number} (应为2个字母+3-4个数字，如MU5100)")
+            raise ValueError(f"航班号格式不正确: {flight_number} (应为2位字母或数字+3-4个数字，如MU5100、G54381、3U8888)")
         
         return flight_str
     
