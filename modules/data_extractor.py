@@ -90,7 +90,7 @@ class DataExtractor:
             segments = []
             for segment_index in range(1, segment_count + 1):
                 segment_data = self._extract_single_segment(
-                    driver, flight_number, departure_date, segment_index
+                    driver, flight_number, departure_date, segment_index, segment_count
                 )
                 
                 if segment_data:
@@ -156,7 +156,7 @@ class DataExtractor:
             return 0
     
     def _extract_single_segment(self, driver: WebDriver, flight_number: str, 
-                               departure_date: str, segment_index: int) -> Optional[Dict[str, Any]]:
+                               departure_date: str, segment_index: int, total_segments: int = 1) -> Optional[Dict[str, Any]]:
         """
         提取单个航段的数据
         
@@ -165,6 +165,7 @@ class DataExtractor:
             flight_number: 航班号
             departure_date: 出发日期
             segment_index: 航段索引（从1开始）
+            total_segments: 总航段数
             
         Returns:
             航段数据字典
@@ -186,48 +187,48 @@ class DataExtractor:
             
             # 提取出发机场
             departure_airport = self._extract_text_field(
-                driver, 'departure_airport', segment_index
+                driver, 'departure_airport', segment_index, total_segments
             )
             if departure_airport:
                 segment_data['departure_airport'] = departure_airport
             
             # 提取到达机场
             arrival_airport = self._extract_text_field(
-                driver, 'arrival_airport', segment_index
+                driver, 'arrival_airport', segment_index, total_segments
             )
             if arrival_airport:
                 segment_data['arrival_airport'] = arrival_airport
             
             # 提取计划起飞时间
             scheduled_departure = self._extract_text_field(
-                driver, 'scheduled_departure', segment_index
+                driver, 'scheduled_departure', segment_index, total_segments
             )
             if scheduled_departure:
                 segment_data['scheduled_departure'] = scheduled_departure
             
             # 提取计划到达时间
             scheduled_arrival = self._extract_text_field(
-                driver, 'scheduled_arrival', segment_index
+                driver, 'scheduled_arrival', segment_index, total_segments
             )
             if scheduled_arrival:
                 segment_data['scheduled_arrival'] = scheduled_arrival
             
             # 提取航班状态
             flight_status = self._extract_text_field(
-                driver, 'flight_status', segment_index
+                driver, 'flight_status', segment_index, total_segments
             )
             if flight_status:
                 segment_data['flight_status'] = flight_status
             
             # 提取实际起飞时间（图片识别）
             actual_departure = self._extract_time_image(
-                driver, 'actual_departure_img', segment_index, '实际起飞时间'
+                driver, 'actual_departure_img', segment_index, '实际起飞时间', flight_number
             )
             segment_data['actual_departure'] = actual_departure
             
             # 提取实际到达时间（图片识别）
             actual_arrival = self._extract_time_image(
-                driver, 'actual_arrival_img', segment_index, '实际到达时间'
+                driver, 'actual_arrival_img', segment_index, '实际到达时间', flight_number
             )
             segment_data['actual_arrival'] = actual_arrival
             
@@ -239,7 +240,7 @@ class DataExtractor:
                             {'flight_number': flight_number, 'segment_index': segment_index})
             return None
     
-    def _extract_text_field(self, driver: WebDriver, field_name: str, segment_index: int) -> str:
+    def _extract_text_field(self, driver: WebDriver, field_name: str, segment_index: int, total_segments: int = 1) -> str:
         """
         提取文本字段
         
@@ -247,6 +248,7 @@ class DataExtractor:
             driver: WebDriver实例
             field_name: 字段名称
             segment_index: 航段索引
+            total_segments: 总航段数
             
         Returns:
             提取的文本内容
@@ -256,11 +258,20 @@ class DataExtractor:
             if not xpath_template:
                 return ''
             
-            # 如果XPath包含占位符，则格式化
-            if '{}' in xpath_template:
-                xpath = xpath_template.format(segment_index)
+            # 特殊处理航班状态字段的XPath
+            if field_name == 'flight_status':
+                if total_segments == 1:
+                    # 单条记录时，使用不带索引的XPath
+                    xpath = "/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div/div[10]/span"
+                else:
+                    # 多条记录时，使用带索引的XPath
+                    xpath = f"/html/body/div[1]/div[2]/div[1]/div/div[2]/div[3]/div[{segment_index}]/div[10]/span"
             else:
-                xpath = xpath_template
+                # 其他字段按原逻辑处理
+                if '{}' in xpath_template:
+                    xpath = xpath_template.format(segment_index)
+                else:
+                    xpath = xpath_template
             
             element = driver.find_element(By.XPATH, xpath)
             text = element.text.strip() if element else ''
@@ -278,7 +289,7 @@ class DataExtractor:
             return ''
     
     def _extract_time_image(self, driver: WebDriver, field_name: str, 
-                           segment_index: int, field_description: str) -> str:
+                           segment_index: int, field_description: str, flight_number: str = "") -> str:
         """
         提取时间图片并进行OCR识别（带重试机制）
         
@@ -287,6 +298,7 @@ class DataExtractor:
             field_name: 字段名称
             segment_index: 航段索引
             field_description: 字段描述（用于日志）
+            flight_number: 航班号
             
         Returns:
             识别的时间字符串或图片base64编码
@@ -302,60 +314,45 @@ class DataExtractor:
             else:
                 xpath = xpath_template
             
-            # 查找图片元素
-            try:
-                img_element = driver.find_element(By.XPATH, xpath)
-            except NoSuchElementException:
-                if self.logger:
-                    self.logger.warning(f"未找到{field_description}图片元素，航段 {segment_index}")
-                return '元素未找到'
-            
-            # 尝试OCR识别（带重试机制）
-            for attempt in range(1, self.max_time_image_retries + 1):
-                try:
-                    if self.logger:
-                        self.logger.info(f"{field_description}识别尝试 {attempt}/{self.max_time_image_retries}，航段 {segment_index}")
-                    
-                    # OCR识别
-                    time_result = self.ocr_processor.recognize_time_image(
-                        img_element, max_attempts=1
-                    )
-                    
-                    if time_result:
-                        if self.logger:
-                            self.logger.info(f"{field_description}识别成功: {time_result}，航段 {segment_index}")
-                        return time_result
-                    
-                    if self.logger:
-                        self.logger.warning(f"{field_description}识别失败，尝试 {attempt}/{self.max_time_image_retries}，航段 {segment_index}")
-                    
-                    # 重试前等待
-                    if attempt < self.max_time_image_retries:
-                        time.sleep(0.5)
-                        
-                except Exception as e:
-                    if self.logger:
-                        log_exception('data_extractor', '_extract_time_image', e, 
-                                    {'field_name': field_name, 'segment_index': segment_index, 'attempt': attempt})
-                    
-                    if attempt < self.max_time_image_retries:
-                        time.sleep(0.5)
-            
-            # 所有重试都失败，保存原始图片
             if self.logger:
-                self.logger.error(f"{field_description}识别失败，已尝试 {self.max_time_image_retries} 次，航段 {segment_index}")
+                self.logger.info(f"{field_description}图片XPath: {xpath}")
             
-            # 根据配置决定是否保存图片
-            if self.output_config.get('save_images', True):
-                return self._save_failed_image(img_element, field_description, segment_index)
+            # 查找图片元素
+            img_element = driver.find_element(By.XPATH, xpath)
+            
+            # 确定时间类型
+            time_type = "departure" if "departure" in field_name else "arrival"
+            
+            # 使用OCR识别时间图片
+            time_result = self.ocr_processor.recognize_time_image(
+                img_element, 
+                max_attempts=self.retry_config.get('time_image_max_attempts', 3),
+                flight_number=flight_number,
+                segment_index=segment_index,
+                time_type=time_type
+            )
+            
+            if time_result:
+                if self.logger:
+                    self.logger.info(f"{field_description}识别成功: {time_result}，航段 {segment_index}")
+                return time_result
             else:
-                return '识别失败'
+                if self.logger:
+                    self.logger.warning(f"{field_description}识别失败，尝试 {self.retry_config.get('time_image_max_attempts', 3)}/{self.retry_config.get('time_image_max_attempts', 3)}，航段 {segment_index}")
                 
+                # 保存失败的图片
+                base64_image = self._save_failed_image(img_element, field_description, segment_index)
+                return base64_image
+                
+        except NoSuchElementException:
+            if self.logger:
+                self.logger.warning(f"未找到{field_description}图片元素，航段 {segment_index}")
+            return '未找到图片'
         except Exception as e:
             if self.logger:
                 log_exception('data_extractor', '_extract_time_image', e, 
                             {'field_name': field_name, 'segment_index': segment_index})
-            return '提取异常'
+            return '识别异常'
     
     def _save_failed_image(self, img_element, field_description: str, segment_index: int) -> str:
         """

@@ -160,7 +160,7 @@ class OCRProcessor:
                 # 方法1: 直接使用ddddocr识别原始图片
                 if self.ddddocr_available:
                     result1 = self._ddddocr_recognize(image_data, 'captcha')
-                    if result1 and len(result1) == 4:
+                    if result1 and len(result1) >= 3 and len(result1) <= 6:  # 接受3-6位验证码
                         if self.logger:
                             self.logger.info(f"ddddocr直接识别成功: {result1}")
                         return result1
@@ -185,7 +185,7 @@ class OCRProcessor:
                             
                             # 使用ddddocr识别
                             result = self._ddddocr_recognize(processed_data, 'captcha')
-                            if result and len(result) == 4:
+                            if result and len(result) >= 3 and len(result) <= 6:  # 接受3-6位验证码
                                 if self.logger:
                                     self.logger.info(f"ddddocr {method_name} 识别成功: {result}")
                                 return result
@@ -237,14 +237,14 @@ class OCRProcessor:
         try:
             # 根据图片类型设置字符范围
             if image_type == 'captcha':
-                # 验证码使用小写+大写英文字母
+                # 验证码使用小写英文a-z + 大写英文A-Z + 整数0-9
                 self.dddd_ocr.set_ranges(3)
             elif image_type == 'time':
-                # 时间识别使用数字
-                self.dddd_ocr.set_ranges(0)
+                # 时间识别使用数字+冒号
+                self.dddd_ocr.set_ranges(5)
             else:
-                # 默认使用小写+大写英文字母
-                self.dddd_ocr.set_ranges(3)
+                # 默认使用小写英文a-z + 大写英文A-Z + 整数0-9
+                self.dddd_ocr.set_ranges(6)
             
             # 使用概率模式进行识别
             result = self.dddd_ocr.classification(image_data, probability=True)
@@ -325,6 +325,10 @@ class OCRProcessor:
             提取的时间字符串
         """
         try:
+            if self.logger:
+                self.logger.info(f"开始从概率结果提取时间字符，概率位置数: {len(probabilities)}")
+                self.logger.info(f"字符集: {charsets}")
+            
             # 提取所有有意义的字符
             chars = []
             for i, prob_list in enumerate(probabilities):
@@ -332,20 +336,39 @@ class OCRProcessor:
                     max_prob = max(prob_list)
                     max_idx = prob_list.index(max_prob)
                     char = charsets[max_idx]
+                    
+                    if self.logger:
+                        self.logger.info(f"位置{i+1}: 字符='{char}', 置信度={max_prob:.3f}")
+                    
                     if char.strip() and max_prob > 0.01:  # 非空字符且置信度足够
                         chars.append(char)
+                        if self.logger:
+                            self.logger.info(f"位置{i+1}: 字符'{char}'被接受（置信度: {max_prob:.3f}）")
+                    else:
+                        if self.logger:
+                            self.logger.warning(f"位置{i+1}: 字符'{char}'被拒绝（置信度: {max_prob:.3f}，阈值: 0.01）")
             
             result = ''.join(chars)
             
-            # 验证时间格式
-            if re.match(r'^\d{1,2}:\d{2}$', result):
+            if self.logger:
+                self.logger.info(f"提取的字符序列: '{result}'")
+            
+            # 直接返回提取的字符序列，不进行格式验证
+            if result:
+                if self.logger:
+                    self.logger.info(f"时间字符提取成功: '{result}'")
                 return result
+            else:
+                if self.logger:
+                    self.logger.warning(f"时间字符提取为空")
             
             return None
             
         except Exception as e:
             if self.logger:
-                self.logger.warning(f"时间字符提取失败: {str(e)}")
+                self.logger.error(f"时间字符提取异常: {str(e)}")
+                log_exception('ocr_processor', '_extract_time_from_probability', e, 
+                            {'probabilities_count': len(probabilities) if probabilities else 0})
             return None
 
     def _preprocess_captcha_image_method1(self, image_data: bytes) -> Image.Image:
@@ -539,6 +562,246 @@ class OCRProcessor:
             return None
 
 
+    def recognize_time_image(self, image_element: WebElement, max_attempts: int = 3, flight_number: str = "", segment_index: int = 0, time_type: str = "time") -> Optional[str]:
+        """
+        识别时间图片（带重试机制）
+        
+        Args:
+            image_element: Selenium获取的时间图片元素
+            max_attempts: 最大重试次数
+            flight_number: 航班号
+            segment_index: 航段索引
+            time_type: 时间类型 (departure/arrival)
+            
+        Returns:
+            HH:MM格式的时间字符串，失败返回None
+        """
+        for attempt in range(1, max_attempts + 1):
+            try:
+                if self.logger:
+                    self.logger.info(f"时间图片识别尝试 {attempt}/{max_attempts}")
+                
+                # 获取图片数据
+                image_data = self._get_image_data(image_element)
+                if not image_data:
+                    if self.logger:
+                        self.logger.error(f"获取时间图片数据失败，尝试 {attempt}/{max_attempts}")
+                    continue
+                
+                # 保存时间图片到本地（无论识别成功与否）
+                self._save_time_image_to_file(image_data, attempt, flight_number, segment_index, time_type)
+                
+                if self.logger:
+                    self.logger.info(f"时间图片数据获取成功，大小: {len(image_data)} 字节")
+                
+                # 使用ddddocr识别时间图片
+                if self.ddddocr_available:
+                    if self.logger:
+                        self.logger.info("开始使用ddddocr识别时间图片")
+                    
+                    result = self._ddddocr_recognize(image_data, 'time')
+                    
+                    if self.logger:
+                        self.logger.info(f"ddddocr原始识别结果: '{result}'")
+                    
+                    if result:
+                        # 清理和验证结果
+                        cleaned_result = self._clean_time_result(result)
+                        
+                        if self.logger:
+                            self.logger.info(f"时间结果清理: 原始='{result}' -> 清理后='{cleaned_result}'")
+                        
+                        if cleaned_result:
+                            if self.logger:
+                                self.logger.info(f"时间图片识别成功: {cleaned_result}")
+                            return cleaned_result
+                        else:
+                            if self.logger:
+                                self.logger.warning(f"时间结果清理失败，原始结果: '{result}'")
+                    else:
+                        if self.logger:
+                            self.logger.warning("ddddocr识别返回空结果")
+                
+                # 如果ddddocr不可用，使用传统OCR方法
+                if not self.ddddocr_available and TESSERACT_AVAILABLE:
+                    if self.logger:
+                        self.logger.info("ddddocr不可用，尝试使用Tesseract识别")
+                    
+                    # 预处理图片
+                    processed_image = self._preprocess_time_image(image_data)
+                    
+                    # Tesseract识别
+                    config = '--psm 8 --oem 3 -c tessedit_char_whitelist=0123456789:'
+                    result = pytesseract.image_to_string(processed_image, config=config).strip()
+                    
+                    if self.logger:
+                        self.logger.info(f"Tesseract识别结果: '{result}'")
+                    
+                    if result:
+                        cleaned_result = self._clean_time_result(result)
+                        if cleaned_result:
+                            if self.logger:
+                                self.logger.info(f"时间图片识别成功: {cleaned_result}")
+                            return cleaned_result
+                
+                if self.logger:
+                    self.logger.warning(f"时间图片识别失败，尝试 {attempt}/{max_attempts}")
+                
+                # 重试前等待
+                if attempt < max_attempts:
+                    time.sleep(0.5)
+                    
+            except Exception as e:
+                if self.logger:
+                    log_exception('ocr_processor', 'recognize_time_image', e, 
+                                {'attempt': attempt, 'max_attempts': max_attempts})
+                
+                if attempt < max_attempts:
+                    time.sleep(0.5)
+        
+        if self.logger:
+            self.logger.error(f"时间图片识别失败，已尝试 {max_attempts} 次")
+        return None
+
+    def _save_time_image_to_file(self, image_data: bytes, attempt: int, flight_number: str = "", segment_index: int = 0, time_type: str = "time") -> None:
+        """
+        保存时间图片到本地文件
+        
+        Args:
+            image_data: 图片二进制数据
+            attempt: 尝试次数
+            flight_number: 航班号
+            segment_index: 航段索引
+            time_type: 时间类型 (departure/arrival)
+        """
+        try:
+            import os
+            from datetime import datetime
+            
+            # 确保timeimage目录存在
+            time_dir = os.path.join("output", "timeimage")
+            if not os.path.exists(time_dir):
+                os.makedirs(time_dir)
+            
+            # 生成文件名，包含航班号、航段索引、时间类型等信息
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")[:-3]  # 包含毫秒
+            if flight_number and segment_index > 0:
+                filename = f"{time_type}_{flight_number}_seg{segment_index}_{timestamp}_attempt{attempt}.png"
+            else:
+                filename = f"{time_type}_image_{timestamp}_attempt{attempt}.png"
+            filepath = os.path.join(time_dir, filename)
+            
+            # 保存图片
+            with open(filepath, 'wb') as f:
+                f.write(image_data)
+            
+            if self.logger:
+                self.logger.info(f"时间图片已保存: {filepath}")
+                
+        except Exception as e:
+            if self.logger:
+                self.logger.error(f"保存时间图片失败: {str(e)}")
+
+    def _preprocess_time_image(self, image_data: bytes) -> Image.Image:
+        """
+        时间图片预处理
+        
+        Args:
+            image_data: 图片二进制数据
+            
+        Returns:
+            预处理后的PIL图片对象
+        """
+        try:
+            # 加载图片
+            image = Image.open(io.BytesIO(image_data))
+            
+            # 转换为灰度图
+            if image.mode != 'L':
+                image = image.convert('L')
+            
+            # 放大图片
+            scale_factor = 3
+            new_size = (image.width * scale_factor, image.height * scale_factor)
+            image = image.resize(new_size, Image.LANCZOS)
+            
+            # 增强对比度
+            enhancer = ImageEnhance.Contrast(image)
+            image = enhancer.enhance(2.0)
+            
+            # 二值化
+            img_array = np.array(image)
+            _, thresh = cv2.threshold(img_array, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+            
+            return Image.fromarray(thresh)
+            
+        except Exception as e:
+            if self.logger:
+                self.logger.error(f"时间图片预处理失败: {str(e)}")
+            # 返回原始图片
+            return Image.open(io.BytesIO(image_data))
+
+    def _clean_time_result(self, result: str) -> Optional[str]:
+        """
+        清理时间识别结果
+        
+        Args:
+            result: 原始识别结果
+            
+        Returns:
+            清理后的时间字符串（HH:MM格式）
+        """
+        if self.logger:
+            self.logger.info(f"开始清理时间识别结果: '{result}'")
+        
+        if not result:
+            if self.logger:
+                self.logger.warning("时间识别结果为空")
+            return None
+        
+        # 移除空白字符
+        cleaned = result.strip()
+        
+        if self.logger:
+            self.logger.info(f"移除空白字符后: '{cleaned}'")
+        
+        # 首先尝试匹配标准时间格式 HH:MM 或 H:MM
+        time_pattern = re.compile(r'(\d{1,2}):(\d{2})')
+        match = time_pattern.search(cleaned)
+        
+        if match:
+            hour, minute = match.groups()
+            # 确保小时是两位数
+            hour = hour.zfill(2)
+            final_result = f"{hour}:{minute}"
+            
+            if self.logger:
+                self.logger.info(f"标准时间格式匹配成功: 小时='{hour}', 分钟='{minute}', 最终结果='{final_result}'")
+            
+            return final_result
+        
+        # 如果没有冒号，尝试匹配4位数字格式 HHMM
+        four_digit_pattern = re.compile(r'^(\d{4})$')
+        match = four_digit_pattern.search(cleaned)
+        
+        if match:
+            digits = match.group(1)
+            hour = digits[:2]
+            minute = digits[2:]
+            final_result = f"{hour}:{minute}"
+            
+            if self.logger:
+                self.logger.info(f"4位数字格式匹配成功: 原始='{digits}', 小时='{hour}', 分钟='{minute}', 最终结果='{final_result}'")
+            
+            return final_result
+        
+        # 如果都不匹配，记录警告
+        if self.logger:
+            self.logger.warning(f"时间格式匹配失败: '{cleaned}' (支持格式: HH:MM 或 HHMM)")
+        
+        return None
+
+
     def get_image_as_base64(self, image_element: WebElement) -> Optional[str]:
         """
         获取图片的base64编码（用于保存到Excel）
@@ -588,3 +851,18 @@ def get_image_as_base64(image_element: WebElement) -> Optional[str]:
     """
     processor = OCRProcessor()
     return processor.get_image_as_base64(image_element)
+
+
+def recognize_time_image(image_element: WebElement, max_attempts: int = 3) -> Optional[str]:
+    """
+    识别时间图片的便捷函数
+    
+    Args:
+        image_element: Selenium获取的时间图片元素
+        max_attempts: 最大重试次数
+        
+    Returns:
+        HH:MM格式的时间字符串，失败返回None
+    """
+    processor = OCRProcessor()
+    return processor.recognize_time_image(image_element, max_attempts)
