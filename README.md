@@ -52,6 +52,25 @@ pip install -r requirements.txt
 pip install paddlepaddle paddleocr
 ```
 
+#### DdddOCR（轻量级验证码识别）
+
+DdddOCR是一个轻量级的通用验证码识别库，特别适用于验证码识别场景。<mcreference link="https://github.com/tdwaofei/ddddocr.git" index="0">0</mcreference>
+
+```bash
+pip install ddddocr
+```
+
+**特点**：
+- 无需额外配置，开箱即用
+- 专门针对验证码识别优化
+- 支持多种验证码类型（数字、字母、混合）
+- 轻量级，依赖少
+
+**使用建议**：
+- 对于简单的数字或字母验证码，推荐使用DdddOCR
+- 对于复杂的文本识别，推荐使用PaddleOCR
+- 系统会根据配置自动选择合适的OCR引擎
+
 ## 项目结构
 
 ```
@@ -149,10 +168,11 @@ python main.py --version
 ```json
 {
   "ocr": {
-    "engine": "paddleocr",      // OCR引擎: tesseract 或 paddleocr
+    "engine": "paddleocr",      // OCR引擎: tesseract、paddleocr 或 ddddocr
     "tesseract_path": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
     "language": "eng",          // 识别语言
-    "confidence_threshold": 60  // 置信度阈值
+    "confidence_threshold": 60, // 置信度阈值
+    "ddddocr_beta": false       // DdddOCR是否使用beta模型
   }
 }
 ```
@@ -209,6 +229,7 @@ python main.py --version
 **解决方案**:
 - 检查Tesseract是否正确安装并添加到PATH
 - 尝试使用PaddleOCR引擎：修改配置文件中的 `ocr.engine` 为 `paddleocr`
+- 尝试使用DdddOCR引擎：修改配置文件中的 `ocr.engine` 为 `ddddocr`（特别适用于验证码识别）
 - 调整OCR置信度阈值
 
 #### 3. 验证码处理失败

@@ -11,6 +11,7 @@ xlrd>=2.0.1
 # OCR Recognition
 paddlepaddle>=2.5.0
 paddleocr>=2.7.0
+ddddocr>=1.4.11
 Pillow>=10.0.0
 opencv-python>=4.8.0
 
